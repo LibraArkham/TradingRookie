@@ -152,6 +152,27 @@ input[type=number],input[type=text],textarea{font:inherit;padding:8px 10px;borde
 .bars{display:grid;gap:8px;margin:8px 0}.bar{display:grid;grid-template-columns:5em 1fr auto;gap:8px;align-items:center;font-size:14px}.bar div{height:14px;background:var(--line);border-radius:99px;overflow:hidden}.bar i{display:block;height:100%}
 .scroll{overflow-x:auto;max-width:100%;-webkit-overflow-scrolling:touch}.scroll .tbl{min-width:460px}
 .tbl td[colspan]{white-space:normal;text-align:left}
+.sim{display:block}
+.simhud{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin:10px 0}
+.simhud div{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:6px 8px;min-width:0}
+.simhud span{display:block;font-size:12px;color:var(--mute)}.simhud b{font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block}
+.simfig{height:clamp(280px,62vw,440px);touch-action:manipulation;cursor:crosshair}
+.simctl{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin:8px 0}
+.simctl .btn,.simctl button{padding:0 6px;font-size:14px}
+button.pri,.btn.pri{background:var(--acc);color:#fff;border-color:var(--acc)}
+.simpos{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin:8px 0;font-size:14px;line-height:1.7}
+.simbox{border:1px solid var(--line);border-radius:14px;padding:4px 12px 12px;margin:10px 0}
+.simbox h3{margin:14px 0 6px;font-size:16px}
+.simf{display:grid;grid-template-columns:auto minmax(0,1fr);gap:6px 10px;align-items:center;margin:8px 0}
+.simf input{font:15px "Space Grotesk",sans-serif;min-height:40px;padding:0 10px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);min-width:0;width:100%;box-sizing:border-box}
+.simlist{font-size:13px;line-height:1.9}.simlist div{border-bottom:1px solid var(--line)}
+.simlist button.x{min-height:28px;padding:0 10px;font-size:12px;margin-left:6px}
+.sim .chips .note{margin:0;align-self:center}
+@media(max-width:520px){.simctl{grid-template-columns:repeat(2,minmax(0,1fr))}.simhud{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.simbox summary{cursor:pointer;list-style:none}.simbox summary::-webkit-details-marker{display:none}
+.simbox summary h3{display:inline-block}.simbox summary h3::after{content:" ▾";color:var(--mute)}
+.simbox details[open] summary h3::after,details.simbox[open]>summary h3::after{content:" ▴"}
+.sim [data-h=tip]:empty{display:none}
 
 </style></head><body>
 <div class="shell">
@@ -2851,7 +2872,13 @@ input[type=number],input[type=text],textarea{font:inherit;padding:8px 10px;borde
 </article>
 <p class="next"><a href="#l20-video">下一课：第20课 均值回归：布林带与 RSI →</a></p></div>
 <div class="panel" id="l19-video"><div class="vid"><video controls playsinline preload="none" poster="video/poster19.jpg" data-src="video/lesson19.mp4"></video><div><h3 style="margin-top:0">章节</h3><p class="note">无配音，看字幕即可。点章节可以跳转。</p><ol class="chap"><li><button data-t="0"><span class="num">0:00</span>开场</button></li><li><button data-t="4.5"><span class="num">0:04</span>原理</button></li><li><button data-t="14.5"><span class="num">0:14</span>参数</button></li><li><button data-t="24.0"><span class="num">0:24</span>回测</button></li><li><button data-t="34.5"><span class="num">0:34</span>卖波动</button></li><li><button data-t="44.5"><span class="num">0:44</span>熬鹰</button></li><li><button data-t="54.0"><span class="num">0:54</span>风无向</button></li><li><button data-t="63.5"><span class="num">1:03</span>规则</button></li></ol></div></div></div>
-<div class="panel" id="l19-practice"><p class="lead" style="margin-top:12px">所有K线都是比特币的真实成交数据（Bitstamp BTC/USD，2025-01-07 至 <span class="asof num">—</span>），时间均为 UTC。</p><nav class="toc"><a href="#l19k1">在真实行情里跑一个网格</a><a href="#l19k2">网格其实是在"卖波动"</a><a href="#l19k3">格子越多越好吗</a><a href="#l19k4">小测验</a></nav><section id="l19k1">
+<div class="panel" id="l19-practice"><p class="lead" style="margin-top:12px">所有K线都是比特币的真实成交数据（Bitstamp BTC/USD，2025-01-07 至 <span class="asof num">—</span>），时间均为 UTC。</p><nav class="toc"><a href="#l19k0">实战：亲手布一个网格</a><a href="#l19k1">在真实行情里跑一个网格</a><a href="#l19k2">网格其实是在"卖波动"</a><a href="#l19k3">格子越多越好吗</a><a href="#l19k4">小测验</a></nav><section id="l19k0">
+<h2>实战：亲手布一个网格</h2>
+<p class="lead">真实的比特币 4 小时 K 线，日期先隐藏。本金 10,000 美元现货，手续费 0.1%。K 线一根一根往前走，你自己决定区间、格数和止损，也可以手动下单。走完 180 根（30 天）后，和"规则网格"、"一直拿着"比一比。</p>
+<div id="l19sim"></div>
+</section>
+
+<section id="l19k1">
 <h2>练习 1：在真实行情里跑一个网格</h2>
 <p class="lead">选一段真实的比特币行情（4 小时 K 线），设定价格区间和格数，看看网格机器人会怎么做。本金 10,000 美元，每次成交手续费 0.1%。</p>
 <div class="row seg" role="radiogroup" aria-label="行情"><span>行情</span><input type="radio" name="l19w" id="l19w1" value="0" checked><label for="l19w1">震荡</label><input type="radio" name="l19w" id="l19w2" value="1"><label for="l19w2">再震荡</label><input type="radio" name="l19w" id="l19w3" value="2"><label for="l19w3">单边涨</label><input type="radio" name="l19w" id="l19w4" value="3"><label for="l19w4">单边跌</label><input type="radio" name="l19w" id="l19w5" value="4"><label for="l19w5">暴跌</label></div>
@@ -2961,7 +2988,13 @@ input[type=number],input[type=text],textarea{font:inherit;padding:8px 10px;borde
 </article>
 <p class="next"><a href="#l21-video">下一课：第21课 区间交易与假突破 →</a></p></div>
 <div class="panel" id="l20-video"><div class="vid"><video controls playsinline preload="none" poster="video/poster20.jpg" data-src="video/lesson20.mp4"></video><div><h3 style="margin-top:0">章节</h3><p class="note">无配音，看字幕即可。点章节可以跳转。</p><ol class="chap"><li><button data-t="0"><span class="num">0:00</span>开场</button></li><li><button data-t="4.5"><span class="num">0:04</span>布林带和 RSI</button></li><li><button data-t="14.5"><span class="num">0:14</span>收益形状</button></li><li><button data-t="24.5"><span class="num">0:24</span>方差比</button></li><li><button data-t="35.0"><span class="num">0:35</span>Michael Liu</button></li><li><button data-t="45.0"><span class="num">0:45</span>川沐</button></li><li><button data-t="55.0"><span class="num">0:55</span>规则</button></li></ol></div></div></div>
-<div class="panel" id="l20-practice"><p class="lead" style="margin-top:12px">所有K线都是比特币的真实成交数据（Bitstamp BTC/USD，2025-01-07 至 <span class="asof num">—</span>），时间均为 UTC。</p><nav class="toc"><a href="#l20k1">布林带均值回归策略</a><a href="#l20k2">"超卖"之后真的会反弹吗</a><a href="#l20k3">比特币是"爱回头"还是"爱延续"</a><a href="#l20k4">小测验</a></nav><section id="l20k1">
+<div class="panel" id="l20-practice"><p class="lead" style="margin-top:12px">所有K线都是比特币的真实成交数据（Bitstamp BTC/USD，2025-01-07 至 <span class="asof num">—</span>），时间均为 UTC。</p><nav class="toc"><a href="#l20k0">实战：亲手做一次均值回归</a><a href="#l20k1">布林带均值回归策略</a><a href="#l20k2">"超卖"之后真的会反弹吗</a><a href="#l20k3">比特币是"爱回头"还是"爱延续"</a><a href="#l20k4">小测验</a></nav><section id="l20k0">
+<h2>实战：亲手做一次均值回归</h2>
+<p class="lead">真实的比特币 4 小时 K 线，日期先隐藏。本金 10,000 美元现货，手续费 0.1%。等布林带给出信号，自己下单、设止损和止盈。走完 180 根（30 天）后，和严格按规则执行的机器人比一比。</p>
+<div id="l20sim"></div>
+</section>
+
+<section id="l20k1">
 <h2>练习 1：布林带均值回归策略</h2>
 <p class="lead">规则：收盘价跌破布林带<b>下轨</b>就买入，回到<b>中轨</b>（均线）就卖出；可以加一个止损。用 10 个主流币 2025 年 1 月到 2026 年 10 月的日线回测，每次买卖手续费 0.1%。</p>
 <div class="chips" id="l20coin"></div>
@@ -3064,7 +3097,13 @@ input[type=number],input[type=text],textarea{font:inherit;padding:8px 10px;borde
 </article>
 <p class="next"><a href="#l22-video">下一课：第22课 马丁格尔与亏损补仓 →</a></p></div>
 <div class="panel" id="l21-video"><div class="vid"><video controls playsinline preload="none" poster="video/poster21.jpg" data-src="video/lesson21.mp4"></video><div><h3 style="margin-top:0">章节</h3><p class="note">无配音，看字幕即可。点章节可以跳转。</p><ol class="chap"><li><button data-t="0"><span class="num">0:00</span>开场</button></li><li><button data-t="4.5"><span class="num">0:04</span>高抛低吸</button></li><li><button data-t="14.0"><span class="num">0:14</span>支撑阻力研究</button></li><li><button data-t="24.0"><span class="num">0:24</span>假突破统计</button></li><li><button data-t="34.0"><span class="num">0:34</span>熬鹰</button></li><li><button data-t="44.0"><span class="num">0:44</span>华尔街没有名字</button></li><li><button data-t="53.5"><span class="num">0:53</span>规则</button></li></ol></div></div></div>
-<div class="panel" id="l21-practice"><p class="lead" style="margin-top:12px">所有K线都是比特币的真实成交数据（Bitstamp BTC/USD，2025-01-07 至 <span class="asof num">—</span>），时间均为 UTC。</p><nav class="toc"><a href="#l21k1">突破有多少是假的</a><a href="#l21k2">你会追这个突破吗</a><a href="#l21k3">整数关口真的是支撑吗</a><a href="#l21k4">小测验</a></nav><section id="l21k1">
+<div class="panel" id="l21-practice"><p class="lead" style="margin-top:12px">所有K线都是比特币的真实成交数据（Bitstamp BTC/USD，2025-01-07 至 <span class="asof num">—</span>），时间均为 UTC。</p><nav class="toc"><a href="#l21k0">实战：在区间里高抛低吸</a><a href="#l21k1">突破有多少是假的</a><a href="#l21k2">你会追这个突破吗</a><a href="#l21k3">整数关口真的是支撑吗</a><a href="#l21k4">小测验</a></nav><section id="l21k0">
+<h2>实战：在区间里高抛低吸</h2>
+<p class="lead">真实的比特币 4 小时 K 线，日期先隐藏。本金 10,000 美元，可以做多做空，最高 2 倍，手续费 0.05%。自己画区间、挂单、设止损止盈，遇到突破自己决定怎么办。</p>
+<div id="l21sim"></div>
+</section>
+
+<section id="l21k1">
 <h2>练习 1：突破有多少是假的</h2>
 <p class="lead">把"区间"定义为最近 N 根 4 小时 K 线的最高价和最低价。收盘价第一次站上最高价叫<b>向上突破</b>，跌破最低价叫<b>向下突破</b>。如果之后 M 根 K 线内又收回区间里，就算<b>假突破</b>。数据是比特币 2025 年 1 月到 2026 年 11 月。</p>
 <div class="row"><label for="l21n">区间长度</label><input type="range" id="l21n" min="12" max="180" step="6" value="60"><strong class="num" id="l21nv">—</strong></div>
@@ -3179,7 +3218,13 @@ input[type=number],input[type=text],textarea{font:inherit;padding:8px 10px;borde
 </article>
 <p class="next"><a href="#l23-video">下一课：第23课 均线趋势跟随 →</a></p></div>
 <div class="panel" id="l22-video"><div class="vid"><video controls playsinline preload="none" poster="video/poster22.jpg" data-src="video/lesson22.mp4"></video><div><h3 style="margin-top:0">章节</h3><p class="note">无配音，看字幕即可。点章节可以跳转。</p><ol class="chap"><li><button data-t="0"><span class="num">0:00</span>开场</button></li><li><button data-t="4.5"><span class="num">0:04</span>输了翻倍</button></li><li><button data-t="14.5"><span class="num">0:14</span>2000 人模拟</button></li><li><button data-t="24.5"><span class="num">0:24</span>交易里的马丁</button></li><li><button data-t="34.5"><span class="num">0:34</span>回测与幸存者</button></li><li><button data-t="45.0"><span class="num">0:45</span>熬鹰</button></li><li><button data-t="55.0"><span class="num">0:55</span>分批买入的规则</button></li></ol></div></div></div>
-<div class="panel" id="l22-practice"><p class="lead" style="margin-top:12px">所有K线都是比特币的真实成交数据（Bitstamp BTC/USD，2025-01-07 至 <span class="asof num">—</span>），时间均为 UTC。</p><nav class="toc"><a href="#l22k1">抛硬币翻倍下注</a><a href="#l22k2">补仓机器人在真实行情里</a><a href="#l22k3">补仓到底要多少钱</a><a href="#l22k4">小测验</a></nav><section id="l22k1">
+<div class="panel" id="l22-practice"><p class="lead" style="margin-top:12px">所有K线都是比特币的真实成交数据（Bitstamp BTC/USD，2025-01-07 至 <span class="asof num">—</span>），时间均为 UTC。</p><nav class="toc"><a href="#l22k0">实战：亲手当一次补仓交易者</a><a href="#l22k1">抛硬币翻倍下注</a><a href="#l22k2">补仓机器人在真实行情里</a><a href="#l22k3">补仓到底要多少钱</a><a href="#l22k4">小测验</a></nav><section id="l22k0">
+<h2>实战：亲手当一次补仓交易者</h2>
+<p class="lead">真实的比特币 4 小时 K 线，日期先隐藏。本金 10,000 美元合约，最高 5 倍杠杆，手续费 0.05%。按你自己定的补仓规则一层层补，看着强平价一步步靠近。</p>
+<div id="l22sim"></div>
+</section>
+
+<section id="l22k1">
 <h2>练习 1：抛硬币翻倍下注</h2>
 <p class="lead">经典马丁格尔：每局下注 1 元，赢了拿回 2 元；输了下一局<b>翻倍</b>，直到赢一次，然后回到 1 元。看起来"总会赢回来"。让 2,000 个人各带同样的本金玩 1,000 局。</p>
 <div class="row"><label for="l22b">本金</label><input type="range" id="l22b" min="3" max="12" step="1" value="7"><strong class="num" id="l22bv">—</strong></div>
@@ -4625,6 +4670,168 @@ function rng(seed){let s=seed>>>0||1;return()=>{s^=s<<13;s>>>=0;s^=s>>17;s^=s<<5
 const reduced=matchMedia('(prefers-reduced-motion:reduce)').matches;
 return{fmt,ts,css,candles,lines,quiz,rng,reduced,redraw:{},data:null,ready:[]};
 })();
+/* KL.sim — 真实 K 线逐根交易模拟器 */
+(()=>{const K=KL,fmt=K.fmt;
+const M=0.005;// 维持保证金率
+function Eng(bars,o){const e={bars,cur:o.start-1,end:o.end,fee:o.fee,maxLev:o.maxLev,short:o.short,B:o.cash,cash0:o.cash,q:0,A:0,sl:null,tp:null,fees:0,orders:[],fills:[],rt:[],eq:[],liq:false,oid:1,msg:[]};
+  e.px=()=>bars[e.cur][4];
+  e.equity=p=>e.B+e.q*((p??e.px())-e.A);
+  e.liqPx=()=>{if(!e.q)return null;const p=e.q>0?(e.q*e.A-e.B)/(e.q*(1-M)):(e.q*e.A-e.B)/(e.q*(1+M));return p>0?p:null};
+  e.lev=()=>Math.abs(e.q)*e.px()/Math.max(1e-9,e.equity());
+  function fill(side,qty,price,why,ord){if(!(qty>0))return 0;const t=bars[e.cur+1>e.end?e.cur:e.cur][0];let done=0,pnl=0;
+    if(e.q&&Math.sign(e.q)!==side){const c=Math.min(qty,Math.abs(e.q));pnl=c*(price-e.A)*Math.sign(e.q);e.B+=pnl;e.q+=side*c;done+=c;qty-=c;e.rt.push(pnl-c*price*e.fee-c*e.A*e.fee);if(Math.abs(e.q)<1e-12){e.q=0;e.A=0;e.sl=null;e.tp=null}}
+    if(qty>1e-12&&!(ord&&ord.ro)){if(side<0&&!e.short&&e.q<=0){e.msg.push('这一课只做多，卖单只用来平仓。')}else{
+      const eq=e.equity(price),room=Math.max(0,e.maxLev*eq/price-Math.abs(e.q)),f=Math.min(qty,room);
+      if(f<qty-1e-9)e.msg.push(f>1e-9?`保证金不够，只成交了一部分（最高 ${e.maxLev} 倍）。`:`保证金不够，单子没有成交（最高 ${e.maxLev} 倍）。`);
+      if(f>1e-12){e.A=(e.A*Math.abs(e.q)+price*f)/(Math.abs(e.q)+f);e.q+=side*f;done+=f}}}
+    if(done>0){const fe=done*price*e.fee;e.B-=fe;e.fees+=fe;e.fills.push({k:e.cur,side,qty:done,p:price,why,pnl,tag:ord&&ord.tag});
+      if(ord&&e.q&&Math.sign(e.q)===side){if(ord.sl)e.sl=ord.sl;if(ord.tp)e.tp=ord.tp}
+      if(ord&&ord.onFill)ord.onFill(ord,price)}
+    return done}
+  e.place=x=>{const p=e.px();x={...x,id:e.oid++};
+    if(!x.keep&&x.type==='limit'&&((x.side>0&&x.p>=p)||(x.side<0&&x.p<=p)))x.type='market';
+    if(!x.keep&&x.type==='stop'&&((x.side>0&&x.p<=p)||(x.side<0&&x.p>=p)))x.type='market';
+    e.orders.push(x);return x};
+  e.cancel=id=>{e.orders=e.orders.filter(x=>x.id!==id)};
+  e.cancelAll=tag=>{e.orders=e.orders.filter(x=>tag&&x.tag!==tag)};
+  e.close=(frac=1,why='手动平仓')=>{if(e.q)e.place({side:-Math.sign(e.q),type:'market',qty:Math.abs(e.q)*frac,ro:true,why})};
+  e.step=()=>{if(e.cur>=e.end||e.liq)return false;const k=e.cur+1,[,O,H,L,C]=bars[k],pc=bars[e.cur][4];e.cur=k;e.msg=[];
+    // 市价单在开盘价成交
+    const mk=e.orders.filter(x=>x.type==='market');e.orders=e.orders.filter(x=>x.type!=='market');mk.forEach(x=>fill(x.side,x.qty,O,x.why||'市价',x));
+    const path=C>=O?[O,L,H,C]:[O,H,L,C],seg=[[pc,O,1]];for(let j=0;j<3;j++)seg.push([path[j],path[j+1],0]);
+    for(const[s0,s1,gap]of seg){let p0=s0,guard=0;while(guard++<300){const dn=s1<p0,lo=Math.min(p0,s1),hi=Math.max(p0,s1);let best=null,bd=Infinity;
+      const cand=(p,act,pri)=>{if(p==null||p<lo-1e-9||p>hi+1e-9)return;const d=Math.abs(p-p0)+pri*1e-9;if(d<bd){bd=d;best={p,act}}};
+      if(e.q){const lq=e.liqPx();if(lq&&((e.q>0)===dn))cand(lq,'liq',0);
+        if(e.sl&&((e.q>0)===dn))cand(e.sl,'sl',1);if(e.tp&&((e.q>0)!==dn))cand(e.tp,'tp',2)}
+      for(const x of e.orders){const want=(x.type==='limit')?(x.side>0?dn:!dn):(x.side>0?!dn:dn);if(want)cand(x.p,x,3)}
+      if(!best||lo===hi)break;const fp=gap?s1:best.p;
+      if(best.act==='liq'){fill(-Math.sign(e.q),Math.abs(e.q),fp,'强制平仓（爆仓）');e.liq=true;e.orders=[];e.B=Math.max(e.B,0);break}
+      else if(best.act==='sl')fill(-Math.sign(e.q),Math.abs(e.q),fp,'止损');
+      else if(best.act==='tp')fill(-Math.sign(e.q),Math.abs(e.q),fp,'止盈');
+      else{e.orders=e.orders.filter(x=>x!==best.act);fill(best.act.side,best.act.qty,fp,best.act.why||(best.act.type==='limit'?'限价':'突破单'),best.act)}
+      p0=fp;if(e.liq)break}if(e.liq)break}
+    e.eq.push(e.equity(C));return true};
+  return e}
+K.simEng=Eng;
+
+function stats(eq,e,c0){const f=eq[eq.length-1]/c0-1;let pk=c0,dd=0;eq.forEach(x=>{pk=Math.max(pk,x);dd=Math.max(dd,1-x/pk)});const w=e?e.rt.filter(x=>x>0).length:0;return{f,dd,n:e?e.fills.length:0,rt:e?e.rt.length:0,win:e&&e.rt.length?w/e.rt.length:null,fees:e?e.fees:0}}
+
+K.sim=function(root,cfg){
+  cfg={tf:'h4',warm:60,len:120,fee:0.0005,maxLev:3,cash:10000,short:false,view:70,wins:[],ind:null,coach:null,review:null,bot:null,botName:'按规则执行',tools:null,sizeDef:50,riskDef:1,...cfg};
+  const P=cfg.id,$=s=>root.querySelector(s),usd=x=>(x<0?'-$':'$')+fmt(Math.abs(x),0),pc=(x,d=1)=>`<span class="${x>=0?'up':'dn'}">${x>=0?'+':''}${(x*100).toFixed(d)}%</span>`;
+  const segs=cfg.wins.map((w,i)=>`<input type="radio" name="${P}w" id="${P}w${i}" value="${i}"${i?'':' checked'}><label for="${P}w${i}">片段 ${i+1}</label>`).join('')+`<input type="radio" name="${P}w" id="${P}wr" value="r"${cfg.wins.length?'':' checked'}><label for="${P}wr">随机</label>`;
+  root.classList.add('sim');
+  root.innerHTML=`<div class="row seg" role="radiogroup" aria-label="行情片段"><span>行情</span>${segs}</div>
+<div class="row"><button class="btn" data-a="new">开始 / 重来</button></div>
+<div class="simhud"><div><span>进度</span><b class="num" data-h="prog">—</b></div><div><span>价格</span><b class="num" data-h="px">—</b></div><div><span>权益</span><b class="num" data-h="eq">—</b></div><div><span>收益</span><b class="num" data-h="ret">—</b></div></div>
+<div class="fig simfig"><canvas aria-label="K 线图，点击图表可以取价"></canvas></div>
+<div class="simctl"><button class="btn pri" data-a="s1">下一根 ▶</button><button class="btn" data-a="s5">走 5 根</button><button class="btn" data-a="auto">自动播放</button><button class="btn" data-a="end">结束复盘</button></div>
+<div class="info" data-h="tip"></div>
+<div class="simpos" data-h="pos"></div>
+<div class="simbox" data-h="tools"></div>
+<details class="simbox"${cfg.tools?'':' open'}><summary><h3>${cfg.tools?'手动下单':'下单'}</h3></summary>
+<div class="row seg" role="radiogroup" aria-label="方向"><span>方向</span><input type="radio" name="${P}d" id="${P}d1" value="1" checked><label for="${P}d1">买入${cfg.short?' / 做多':''}</label><input type="radio" name="${P}d" id="${P}d2" value="-1"><label for="${P}d2">卖出${cfg.short?' / 做空':''}</label></div>
+<div class="row seg" role="radiogroup" aria-label="订单类型"><span>类型</span><input type="radio" name="${P}t" id="${P}t1" value="market" checked><label for="${P}t1">市价</label><input type="radio" name="${P}t" id="${P}t2" value="limit"><label for="${P}t2">限价挂单</label><input type="radio" name="${P}t" id="${P}t3" value="stop"><label for="${P}t3">突破单</label></div>
+<div class="simf"><label for="${P}p">挂单价</label><input id="${P}p" inputmode="decimal" placeholder="市价不用填"><label for="${P}sl">止损</label><input id="${P}sl" inputmode="decimal" placeholder="可不填"><label for="${P}tp">止盈</label><input id="${P}tp" inputmode="decimal" placeholder="可不填"></div>
+<div class="row chips" aria-label="点图表填哪个价格"><span class="note">点图表填入：</span><button class="chip on" data-tg="p">挂单价</button><button class="chip" data-tg="sl">止损</button><button class="chip" data-tg="tp">止盈</button></div>
+<div class="row seg" role="radiogroup" aria-label="仓位算法"><span>仓位</span><input type="radio" name="${P}m" id="${P}m1" value="cap" checked><label for="${P}m1">占资金</label><input type="radio" name="${P}m" id="${P}m2" value="risk"><label for="${P}m2">按止损风险</label></div>
+<div class="row"><label for="${P}z">数量</label><input type="range" id="${P}z" min="1" max="${cfg.maxLev*100}" step="1" value="${cfg.sizeDef}"><strong class="num" data-h="zv">—</strong></div>
+<p class="note" data-h="zinfo"></p>
+<div class="row"><button class="btn pri" data-a="go">下单</button></div>
+</details>
+<div class="simbox"><h3>挂着的单</h3><div data-h="ord" class="simlist"></div>
+<h3>成交记录</h3><div data-h="log" class="simlist"></div></div>
+<div data-h="rev" hidden></div>`;
+  const h=n=>root.querySelector(`[data-h="${n}"]`),cv=$('canvas'),val=n=>root.querySelector(`input[name=${P}${n}]:checked`).value;
+  let E=null,B=null,IND=null,win=null,tgt='p',cross=null,timer=null,ended=false,seed=Date.now()%1e6,R=K.rng(seed);
+  const ui={get eng(){return E},get ind(){return IND},get bars(){return B},px:()=>E.px(),tip:m=>{h('tip').innerHTML=m},draw:()=>draw(),place:o=>{const x=E.place(o);draw();return x},cfg};
+  function pick(){const D=K.data[cfg.tf],w=val('w');let s;
+    if(w==='r'){s=cfg.warm+Math.floor(R()*(D.length-cfg.warm-cfg.len-1));win={name:'随机片段'}}
+    else{win=cfg.wins[+w];const t=Date.parse(win.a+'T00:00:00Z')/1000;s=D.findIndex(x=>x[0]>=t)}
+    B=D.slice(s-cfg.warm,s+cfg.len);IND=cfg.ind?cfg.ind(B):{lines:[]}}
+  function start(){stop();pick();E=Eng(B,{start:cfg.warm,end:B.length-1,fee:cfg.fee,maxLev:cfg.maxLev,short:cfg.short,cash:cfg.cash});ended=false;cross=null;h('rev').hidden=true;
+    ui.st={};h('tools').hidden=!cfg.tools;if(cfg.tools){h('tools').innerHTML=cfg.tools.html;cfg.tools.init&&cfg.tools.init(ui)}
+    h('tip').innerHTML=cfg.intro||'';sizeInfo();draw()}
+  function sizeInfo(){if(!E)return;const z=+$(`#${P}z`).value,mode=val('m'),eq=E.equity(),p=E.px();
+    if(mode==='cap'){h('zv').textContent=z+'%';const q=eq*z/100/p;h('zinfo').textContent=`≈ ${q.toFixed(4)} BTC，价值 ${usd(q*p)}${z>100?`，用了 ${(z/100).toFixed(1)} 倍杠杆`:''}`;return q}
+    const r=Math.min(z,500)/100;h('zv').textContent=(Math.min(z,500)/100).toFixed(2)+'%';const sl=+$(`#${P}sl`).value,ep=val('t')==='market'?p:(+$(`#${P}p`).value||p);
+    if(!(sl>0)){h('zinfo').textContent='按风险算仓位需要先填止损价。';return 0}const q=eq*r/100/Math.abs(ep-sl);h('zinfo').textContent=`止损时亏 ${usd(eq*r/100)}（资金的 ${(r).toFixed(2)}%）→ ≈ ${q.toFixed(4)} BTC，价值 ${usd(q*ep)}`;return q}
+  function go(){if(!E||ended)return;const side=+val('d'),type=val('t'),p=+$(`#${P}p`).value,sl=+$(`#${P}sl`).value||null,tp=+$(`#${P}tp`).value||null,q=sizeInfo(),cur=E.px();
+    if(!(q>0))return ui.tip('数量为 0，先调整仓位或填止损。');
+    if(type!=='market'&&!(p>0))return ui.tip('限价单和突破单需要填挂单价，可以直接点图表取价。');
+    const ep=type==='market'?cur:p;
+    if(sl&&((side>0&&sl>=ep)||(side<0&&sl<=ep)))return ui.tip(side>0?'买入的止损要低于入场价。':'卖出的止损要高于入场价。');
+    if(tp&&((side>0&&tp<=ep)||(side<0&&tp>=ep)))return ui.tip(side>0?'买入的止盈要高于入场价。':'卖出的止盈要低于入场价。');
+    const reduce=E.q&&Math.sign(E.q)!==side;
+    const x=E.place({side,type,p:type==='market'?null:p,qty:q,sl,tp,why:{market:'市价',limit:'限价',stop:'突破单'}[type]});
+    let m=x.type!==type?`挂单价已经越过现价，按市价在下一根开盘成交。`:(type==='market'?'市价单会在下一根 K 线开盘时成交。':'已挂单，价格碰到时成交。');
+    const c=cfg.coach&&cfg.coach({kind:'order',o:x,ep,reduce},ui);ui.tip(m+(c?'<br>'+c:''));draw()}
+  function step(n){if(!E||ended)return;let fill=false;for(let k=0;k<n;k++){const f0=E.fills.length;if(!E.step()){finish();break}
+      if(cfg.tools&&cfg.tools.bar)cfg.tools.bar(ui);
+      const nf=E.fills.slice(f0);if(nf.length){fill=true;const c=cfg.coach&&cfg.coach({kind:'fill',fills:nf},ui);ui.tip(nf.map(f=>`第 ${f.k-cfg.warm+1} 根：${f.why}，${f.side>0?'买入':'卖出'} ${f.qty.toFixed(4)} BTC @ ${fmt(f.p,0)}${f.pnl&&!cfg.noPnl?`，这笔平仓 ${f.pnl>=0?'赚':'亏'} ${usd(Math.abs(f.pnl))}`:''}`).join('<br>')+(E.msg.length?'<br>'+E.msg.join(''):'')+(c?'<br>'+c:''))}
+      if(E.liq){ui.tip('<b>爆仓了。</b>权益跌到维持保证金以下，仓位被强制平掉。');finish();break}
+      if(E.cur>=E.end){finish();break}if(fill&&n>1)break}
+    draw();return fill}
+  function stop(){if(timer){clearInterval(timer);timer=null;$('[data-a=auto]').textContent='自动播放'}}
+  function auto(){if(timer)return stop();if(!E||ended)return;$('[data-a=auto]').textContent='暂停';timer=setInterval(()=>{const f=step(1);if(f||ended)stop()},K.reduced?600:260)}
+  function draw(){if(!E)return;const[g,W,H]=(()=>{const r=cv.getBoundingClientRect(),d=devicePixelRatio||1;cv.width=Math.max(1,r.width*d);cv.height=Math.max(1,r.height*d);const g=cv.getContext('2d');g.scale(d,d);return[g,r.width,r.height]})();
+    const view=Math.min(W<520?55:cfg.view+20,cfg.warm+cfg.len),cur=E.cur,s=Math.max(0,cur-view+1),n=view+4,padR=W<520?56:70,padB=8,padT=8,cw=(W-padR)/n;
+    let lo=Infinity,hi=-Infinity;for(let i=s;i<=cur;i++){lo=Math.min(lo,B[i][3]);hi=Math.max(hi,B[i][2])}const mid=(lo+hi)/2,rg=hi-lo;
+    for(const l of IND.lines)for(let i=s;i<=cur;i++){const v=l.v[i];if(v>0){lo=Math.min(lo,v);hi=Math.max(hi,v)}}
+    const HL=[];E.orders.forEach(x=>x.p&&HL.push({p:x.p,c:K.css(x.side>0?'--up':'--dn'),t:(x.side>0?'买 ':'卖 ')+(x.type==='stop'?'突破':'挂单'),d:1}));
+    if(E.q){HL.push({p:E.A,c:K.css('--acc'),t:'均价'});if(E.sl)HL.push({p:E.sl,c:K.css('--dn'),t:'止损',w:2});if(E.tp)HL.push({p:E.tp,c:K.css('--up'),t:'止盈',w:2});const lq=E.liqPx();if(lq)HL.push({p:lq,c:'#a855f7',t:'强平',w:2})}
+    (cfg.tools&&cfg.tools.lines?cfg.tools.lines(ui):[]).forEach(l=>HL.push(l));
+    if(cross)HL.push({p:cross,c:K.css('--mute'),t:fmt(cross,0),d:1});
+    HL.forEach(l=>{if(Math.abs(l.p-mid)<rg*1.6+mid*0.02){lo=Math.min(lo,l.p);hi=Math.max(hi,l.p)}});
+    const pad=(hi-lo)*.06;lo-=pad;hi+=pad;const y=p=>padT+(hi-p)/(hi-lo)*(H-padT-padB),X=i=>(i-s)*cw+cw/2;ui._y=y;ui._inv=yy=>hi-(yy-padT)/(H-padT-padB)*(hi-lo);
+    g.font='12px "Space Grotesk",sans-serif';g.strokeStyle=K.css('--line');g.fillStyle=K.css('--mute');g.lineWidth=1;
+    const raw=(hi-lo)/5,p10=Math.pow(10,Math.floor(Math.log10(raw))),st=[1,2,5,10].map(m=>m*p10).find(q=>q>=raw);for(let p=Math.ceil(lo/st)*st;p<hi;p+=st){const yy=Math.round(y(p))+.5;g.beginPath();g.moveTo(0,yy);g.lineTo(W-padR,yy);g.stroke();g.fillText(fmt(p,0),W-padR+6,yy+4)}
+    if(cfg.warm>s){const xx=X(cfg.warm)-cw/2;g.strokeStyle=K.css('--mute');g.setLineDash([3,4]);g.beginPath();g.moveTo(xx,padT);g.lineTo(xx,H-padB);g.stroke();g.setLineDash([]);g.fillText('开始',xx+4,H-padB-4)}
+    if(IND.band){const[a,b,col]=IND.band;g.fillStyle=col;g.beginPath();let f=1;for(let i=s;i<=cur;i++){const v=a[i];if(!(v>0))continue;f?g.moveTo(X(i),y(v)):g.lineTo(X(i),y(v));f=0}for(let i=cur;i>=s;i--){const v=b[i];if(v>0)g.lineTo(X(i),y(v))}g.fill()}
+    const up=K.css('--up'),dn=K.css('--dn');for(let i=s;i<=cur;i++){const k=B[i],x=X(i),col=k[4]>=k[1]?up:dn;g.strokeStyle=col;g.fillStyle=col;g.beginPath();g.moveTo(Math.round(x)+.5,y(k[2]));g.lineTo(Math.round(x)+.5,y(k[3]));g.stroke();const bw=Math.max(1,cw*.7),t=y(Math.max(k[1],k[4])),b=y(Math.min(k[1],k[4]));g.fillRect(x-bw/2,t,bw,Math.max(1,b-t))}
+    IND.lines.forEach(l=>{g.strokeStyle=l.c;g.lineWidth=l.w||1.6;g.beginPath();let f=1;for(let i=s;i<=cur;i++){const v=l.v[i];if(!(v>0)){f=1;continue}f?g.moveTo(X(i),y(v)):g.lineTo(X(i),y(v));f=0}g.stroke()});g.lineWidth=1;
+    const many=HL.filter(l=>l.d).length>6;HL.forEach(l=>{const yy=y(l.p);if(yy<0||yy>H)return;g.strokeStyle=l.c;g.lineWidth=l.w||1.2;g.setLineDash(l.d?[5,4]:[]);g.beginPath();g.moveTo(0,yy);g.lineTo(W-padR,yy);g.stroke();g.setLineDash([]);g.lineWidth=1;
+      if(!(many&&l.d)){g.font='bold 12px "Noto Sans SC",sans-serif';g.fillStyle=l.c;g.fillText(l.t,6,yy-4)}});
+    E.fills.forEach(f=>{if(f.k<s)return;const x=X(f.k),yy=y(f.p);g.fillStyle=f.side>0?up:dn;g.beginPath();if(f.side>0){g.moveTo(x,yy+2);g.lineTo(x-6,yy+11);g.lineTo(x+6,yy+11)}else{g.moveTo(x,yy-2);g.lineTo(x-6,yy-11);g.lineTo(x+6,yy-11)}g.fill()});
+    const p=E.px(),eq=E.equity();g.fillStyle=K.css('--acc');g.fillRect(W-padR+1,y(p)-9,padR-2,18);g.fillStyle='#fff';g.font='bold 12px "Space Grotesk",sans-serif';g.fillText(fmt(p,0),W-padR+5,y(p)+4);
+    h('prog').textContent=`${Math.max(0,E.cur-cfg.warm+1)} / ${cfg.len}`;h('px').textContent=fmt(p,0);h('eq').textContent=usd(eq);h('ret').innerHTML=pc(eq/cfg.cash-1);
+    h('pos').innerHTML=E.q?`<b>${E.q>0?'多单':'空单'} ${Math.abs(E.q).toFixed(4)} BTC</b> · 均价 ${fmt(E.A,0)} · 浮盈 <span class="${(p-E.A)*E.q>=0?'up':'dn'}">${usd((p-E.A)*E.q)}</span> · 杠杆 ${E.lev().toFixed(2)}x${E.liqPx()?` · 强平价 ${fmt(E.liqPx(),0)}`:''}
+<div class="simf"><label for="${P}psl">持仓止损</label><input id="${P}psl" inputmode="decimal" value="${E.sl?Math.round(E.sl):''}" placeholder="无"><label for="${P}ptp">持仓止盈</label><input id="${P}ptp" inputmode="decimal" value="${E.tp?Math.round(E.tp):''}" placeholder="无"></div>
+<div class="row"><button class="btn" data-a="upd">更新止损止盈</button><button class="btn" data-a="half">平一半</button><button class="btn" data-a="all">全部平仓</button></div>`:'<span class="note">现在空仓。</span>';
+    h('ord').innerHTML=E.orders.length?E.orders.map(x=>`<div><span class="${x.side>0?'up':'dn'}">${x.side>0?'买':'卖'}</span> ${x.type==='market'?'市价（下一根开盘）':(x.type==='limit'?'限价':'突破')+' '+fmt(x.p,0)} · ${x.qty.toFixed(4)} BTC${x.ro?' · 只平仓':''}${x.sl?' · 止损 '+fmt(x.sl,0):''}${x.tp?' · 止盈 '+fmt(x.tp,0):''} <button class="x" data-c="${x.id}" aria-label="撤单">撤</button></div>`).join(''):'<span class="note">没有挂单。</span>';
+    h('log').innerHTML=E.fills.length?E.fills.slice(-6).reverse().map(f=>`<div>第 ${f.k-cfg.warm+1} 根 · ${f.why} · <span class="${f.side>0?'up':'dn'}">${f.side>0?'买':'卖'}</span> ${f.qty.toFixed(4)} @ ${fmt(f.p,0)}${f.pnl&&!cfg.noPnl?` · <span class="${f.pnl>=0?'up':'dn'}">${usd(f.pnl)}</span>`:''}</div>`).join(''):'<span class="note">还没有成交。</span>'}
+  function desc(){const P0=B[cfg.warm][1],P1=B[B.length-1][4],pl=B.slice(cfg.warm);const hi=Math.max(...pl.map(x=>x[2])),lo=Math.min(...pl.map(x=>x[3]));return `比特币从 ${fmt(P0,0)} ${P1>=P0?'涨':'跌'}到 ${fmt(P1,0)}（${P1>=P0?'+':''}${((P1/P0-1)*100).toFixed(1)}%），期间最高 ${fmt(hi,0)}、最低 ${fmt(lo,0)}`}
+  function hold(){const c0=B[cfg.warm][1],q=cfg.cash*(1-cfg.fee)/c0;return B.slice(cfg.warm).map(k=>q*k[4])}
+  function runBot(){if(!cfg.bot)return null;const b=Eng(B,{start:cfg.warm,end:B.length-1,fee:cfg.fee,maxLev:cfg.maxLev,short:cfg.short,cash:cfg.cash}),st={};
+    const api={e:b,B,ind:IND,st,warm:cfg.warm,cap:f=>f*b.equity()/b.px()};cfg.bot(api);while(b.cur<b.end&&!b.liq){b.step();if(b.cur<b.end&&!b.liq)cfg.bot(api)}return b}
+  function finish(){if(ended)return;ended=true;stop();
+    const early=E.cur<E.end&&!E.liq;if(early){while(E.cur<E.end&&!E.liq)E.step()}
+    const bot=runBot(),hd=hold(),me=stats(E.eq,E,cfg.cash),bs=bot&&stats(bot.eq,bot,cfg.cash),hs=stats(hd,null,cfg.cash),t0=K.ts(B[cfg.warm][0]).slice(0,10),t1=K.ts(B[B.length-1][0]).slice(0,10);
+    const row=(n,s)=>`<tr><td>${n}</td><td>${pc(s.f)}</td><td>${s.dd<0.005?'0%':'-'+(s.dd*100).toFixed(0)+'%'}</td><td>${s.n||'—'}</td><td>${s.win==null||cfg.noPnl?'—':Math.round(s.win*100)+'%'}</td></tr>`;
+    const chk=cfg.review?cfg.review(E,bot,ui):'';
+    h('rev').hidden=false;h('rev').innerHTML=`<h3>复盘</h3><p>这段行情是 <b>${t0} 到 ${t1}</b>：${desc()}（${cfg.tf==='h4'?'4 小时':'日'} K 线，共 ${cfg.len} 根）。${E.liq?'<b class="dn">你的账户爆仓了。</b>':''}</p><p class="note">${early?'你提前结束了，剩下的 K 线按你当时的仓位和挂单自动走完。':''}${E.q?'结束时还有持仓，按最后的收盘价计算收益；胜率只统计已经平掉的仓位。':''}你付的手续费：${usd(E.fees)}${bs?`；${cfg.botName}：${usd(bot.fees)}`:''}。</p>
+<div class="scroll"><table class="tbl" style="min-width:0;font-size:13px"><tr><th></th><th>收益</th><th>回撤</th><th>成交</th><th>胜率</th></tr>${row('你',me)}${bs?row(cfg.botName,bs):''}${row('一直拿着',hs)}</table></div>
+<div class="fig sm"><canvas aria-label="账户净值对比"></canvas></div><p class="note">实线是你的账户，${bot?'蓝线是'+cfg.botName+'，':''}灰线是一直拿着。</p>${chk?`<div class="info">${chk}</div>`:''}`;
+    const sr=[{v:hd.map(x=>x/cfg.cash),c:K.css('--mute'),w:1.4,t:'拿着'},...(bot?[{v:bot.eq.map(x=>x/cfg.cash),c:K.css('--acc'),w:1.8,t:'规则'}]:[]),{v:E.eq.map(x=>x/cfg.cash),c:K.css('--ink'),w:2.4,t:'你'}];
+    K.lines(h('rev').querySelector('canvas'),sr,{base:1,fmt:x=>x.toFixed(2)+'x'});draw();h('rev').scrollIntoView({behavior:K.reduced?'auto':'smooth',block:'start'})}
+  root.addEventListener('click',ev=>{const a=ev.target.closest('[data-a]'),c=ev.target.closest('[data-c]'),tg=ev.target.closest('[data-tg]');
+    if(tg){tgt=tg.dataset.tg;root.querySelectorAll('[data-tg]').forEach(z=>z.classList.toggle('on',z===tg));return}
+    if(c){E.cancel(+c.dataset.c);draw();return}if(!a)return;const A=a.dataset.a;
+    if(A==='new')start();else if(!E)return;else if(A==='s1')step(1);else if(A==='s5')step(5);else if(A==='auto')auto();else if(A==='end'){if(confirmEnd())finish()}else if(A==='go')go();
+    else if(A==='half')E.close(.5),ui.tip('平一半的市价单会在下一根开盘成交。'),draw();else if(A==='all')E.close(1),ui.tip('平仓的市价单会在下一根开盘成交。'),draw();
+    else if(A==='upd'){const s=+$(`#${P}psl`).value||null,t=+$(`#${P}ptp`).value||null,p=E.px();
+      if(s&&((E.q>0&&s>=p)||(E.q<0&&s<=p)))return ui.tip('止损要设在现价的'+(E.q>0?'下方':'上方')+'。想立刻离场请用"平仓"。');
+      if(t&&((E.q>0&&t<=p)||(E.q<0&&t>=p)))return ui.tip('止盈要设在现价的'+(E.q>0?'上方':'下方')+'。');E.sl=s;E.tp=t;const cc=cfg.coach&&cfg.coach({kind:'upd'},ui);ui.tip('已更新。'+(cc?'<br>'+cc:''));draw()}
+    else if(cfg.tools&&cfg.tools.click)cfg.tools.click(A,ui,a)});
+  const confirmEnd=()=>true;
+  root.addEventListener('input',ev=>{if(ev.target.id===`${P}z`||ev.target.id===`${P}sl`||ev.target.id===`${P}p`)sizeInfo()});
+  root.addEventListener('change',ev=>{if(ev.target.name===`${P}m`){const r=val('m')==='risk',z=$(`#${P}z`);z.max=r?300:cfg.maxLev*100;z.value=r?cfg.riskDef*100:cfg.sizeDef;sizeInfo()}if(ev.target.name===`${P}w`)start()});
+  cv.addEventListener('click',ev=>{if(!E||!ui._inv)return;const r=cv.getBoundingClientRect(),p=Math.round(ui._inv(ev.clientY-r.top));cross=p;
+    if(cfg.tools&&cfg.tools.tap&&cfg.tools.tap(p,ui)){draw();return}
+    const id={p:`${P}p`,sl:`${P}sl`,tp:`${P}tp`}[tgt];$('#'+id).value=p;if(tgt==='p'&&val('t')==='market'){root.querySelector(`#${P}t2`).checked=true}sizeInfo();draw()});
+  ui.start=start;ui.redraw=()=>{draw();if(ended&&h('rev').querySelector('canvas'))0};
+  return ui}
+})();
 </script>
 <script>
 {
@@ -5929,6 +6136,48 @@ K.quiz($('#l19quiz'),[
 K.redraw.l19=()=>draw1();
 K.ready.push(d=>{D=d;const w=W[0];$('#l19lo').value=w[3];$('#l19hi').value=w[4];draw1()});
 }
+{
+const K=KL,F=K.fmt;
+function layGrid(e,lo,hi,n,frac,stop){const tag='grid';e.cancelAll(tag);e.cancelAll('gstop');const p=e.px(),st=(hi-lo)/n,lv=[];for(let k=0;k<=n;k++)lv.push(lo+k*st);
+  const q=e.equity()*frac/n/((lo+hi)/2);let above=0;
+  const buyAt=k=>e.place({side:1,type:'limit',p:lv[k],qty:q,tag,keep:true,why:'网格买入',onFill:()=>k+1<=n&&sellAt(k+1)});
+  const sellAt=k=>e.place({side:-1,type:'limit',p:lv[k],qty:q,ro:true,tag,keep:true,why:'网格卖出',onFill:()=>k-1>=0&&buyAt(k-1)});
+  lv.forEach((L,k)=>{if(L<p-st*.1)buyAt(k);else if(L>p+st*.1){sellAt(k);above++}});
+  if(above)e.place({side:1,type:'market',qty:above*q,tag,why:'网格底仓'});
+  if(stop>0)e.place({side:-1,type:'stop',p:stop,qty:1e9,ro:true,keep:true,tag:'gstop',why:'网格止损',onFill:()=>e.cancelAll('grid')});
+  return{lv,q,st}}
+const el=document.getElementById('l19sim');
+K.ready.push(()=>{const P='l19s';const ui=K.sim(el,{id:P,tf:'h4',warm:60,len:180,fee:0.001,maxLev:1,cash:10000,short:false,noPnl:true,
+  wins:[{a:'2025-08-01',note:'比特币在 10.7 万到 12.6 万之间来回的震荡'},{a:'2025-04-10',note:'从 7.9 万一路涨上 10 万的单边上涨'},{a:'2025-11-03',note:'从 11 万跌向 9 万以下的单边下跌'},{a:'2026-03-05',note:'6.5 万到 8 万之间的震荡'}],
+  intro:'<b>任务：</b>先看"开始"线左边的 60 根 K 线，判断区间。在下面的网格工具里点图设好下沿、上沿和止损，选格数，点"布网格"。然后一根根往前走，观察网格怎么买卖。走势跑出区间时，你可以撤网格、手动平仓。',
+  tools:{html:`<h3>网格工具</h3><div class="simf"><label for="${P}glo">下沿</label><input id="${P}glo" inputmode="decimal"><label for="${P}ghi">上沿</label><input id="${P}ghi" inputmode="decimal"><label for="${P}gst">区间外止损</label><input id="${P}gst" inputmode="decimal" placeholder="可不填，跌破就全部卖出"><label for="${P}gn">格数</label><input id="${P}gn" inputmode="numeric" value="12"></div>
+<div class="row chips"><span class="note">点图表设：</span><button class="chip" data-a="g-lo">下沿</button><button class="chip" data-a="g-hi">上沿</button><button class="chip" data-a="g-st">止损</button></div>
+<p class="note" data-g="info"></p><div class="row"><button class="btn pri" data-a="g-go">布网格</button><button class="btn" data-a="g-x">撤掉网格</button></div>`,
+   init(u){u.st.t=null;const B=u.bars,w=B.slice(0,60);el.querySelector(`#${P}glo`).value='';el.querySelector(`#${P}ghi`).value='';el.querySelector(`#${P}gst`).value='';info(u)},
+   click(A,u,b){if(A.startsWith('g-')&&['g-lo','g-hi','g-st'].includes(A)){u.st.t=u.st.t===A?null:A;el.querySelectorAll('[data-a^="g-"].chip').forEach(z=>z.classList.toggle('on',z.dataset.a===u.st.t));return}
+     if(A==='g-go'){const lo=+v('glo'),hi=+v('ghi'),n=Math.round(+v('gn')),stp=+v('gst')||0,p=u.px();
+       if(!(lo>0&&hi>lo))return u.tip('先设好下沿和上沿（上沿要高于下沿）。');if(!(n>=2&&n<=60))return u.tip('格数请填 2 到 60。');if(p<lo||p>hi)return u.tip('现价不在你设的区间里，网格开出来会立刻满仓或空仓。先调整区间。');
+       if(stp&&stp>=lo)return u.tip('止损要低于下沿。');if(u.eng.q||u.eng.orders.some(x=>x.tag==='grid'))u.eng.cancelAll('grid');
+       const g=layGrid(u.eng,lo,hi,n,0.95,stp);u.st.g={lo,hi,n,stp,st:g.st,q:g.q};const sp=g.st/((lo+hi)/2);
+       u.tip(`网格已布好：${n} 格，每格 ${F(g.st,0)} 美元（约 ${(sp*100).toFixed(2)}%）。现价上方的格子先用市价买入底仓，下一根开盘成交。${sp<0.004?'<br><b>注意：</b>每格间距不到 0.4%，扣掉一买一卖 0.2% 的手续费后几乎不赚。':''}${stp?'':'<br>你没有设区间外止损：跌出下沿后会一直满仓拿着。'}`);u.draw()}
+     if(A==='g-x'){u.eng.cancelAll('grid');u.eng.cancelAll('gstop');u.st.g=null;u.tip('网格挂单已撤掉。手里的币还在，需要的话用"全部平仓"。');u.draw()}},
+   tap(p,u){if(!u.st.t)return false;const id={'g-lo':'glo','g-hi':'ghi','g-st':'gst'}[u.st.t];el.querySelector(`#${P}${id}`).value=p;info(u);return true},
+   lines(u){const L=[],lo=+v('glo'),hi=+v('ghi'),s=+v('gst');if(lo>0)L.push({p:lo,c:'#0ea5e9',t:'下沿',w:2});if(hi>0)L.push({p:hi,c:'#0ea5e9',t:'上沿',w:2});if(s>0)L.push({p:s,c:K.css('--dn'),t:'网格止损',d:1});return L},
+   bar(u){const g=u.st.g;if(!g)return;const c=u.bars[u.eng.cur][4];if(!u.st.warned&&(c>g.hi||c<g.lo)){u.st.warned=1;setTimeout(()=>u.tip((u.eng.fills.length?'':'')+`<b>价格收在区间${c>g.hi?'上方':'下方'}了。</b>${c>g.hi?'网格已经全部卖完，手里只剩现金，之后的涨幅吃不到。':'网格已经接近满仓，之后的跌幅全部要扛。'}要不要撤网格、重新布，或者止损？`),0)}}},
+  coach(ev,u){if(ev.kind==='fill'){const s=ev.fills.filter(f=>f.why==='网格卖出').length;return s?`完成了 ${s} 次网格来回。`:''}return''},
+  botName:'规则网格',
+  bot(a){if(a.st.done)return;a.st.done=1;const w=a.B.slice(0,a.warm);let lo=Math.min(...w.map(x=>x[3])),hi=Math.max(...w.map(x=>x[2]));const p=a.e.px();lo=Math.min(lo,p*0.97);hi=Math.max(hi,p*1.03);layGrid(a.e,lo,hi,12,0.95,lo*0.97)},
+  review(E,bot,u){const g=u.st.g,out=[];if(!g)return'你这次没有布网格。下次试试在震荡片段里布一个。';const mid=(g.lo+g.hi)/2,sp=g.st/mid,rt=E.fills.filter(f=>f.why==='网格卖出').length,last=u.bars[u.bars.length-1][4];
+    out.push((sp>0.004?'✓':'✗')+` 每格间距 ${(sp*100).toFixed(2)}%，${sp>0.004?'明显大于':'不够大于'}一买一卖的手续费 0.2%。`);
+    out.push((g.stp?'✓ 设了区间外止损。':'✗ 没有设区间外止损。')+(E.fills.some(f=>f.why==='网格止损')?'这次止损被触发了。':''));
+    out.push(`完成了 ${rt} 次网格来回，网格本身赚了约 $${F(rt*g.st*g.q,0)}（未扣手续费）。`);
+    out.push(last>g.hi?'结束时价格在区间上方：网格卖飞了，跑输一直拿着很正常。':last<g.lo?'结束时价格在区间下方：网格在下跌中一路接货，这是网格最大的风险。':'结束时价格还在区间里：这是网格最舒服的情况。');
+    out.push('规则网格用"开始"前 60 根 K 线的最高价和最低价做区间，12 格，止损设在下沿下方 3%。');return out.join('<br>')}});
+  function v(id){return el.querySelector(`#${P}${id}`).value}
+  function info(u){const lo=+v('glo'),hi=+v('ghi'),n=+v('gn');const e=el.querySelector('[data-g=info]');if(lo>0&&hi>lo&&n>1){const st=(hi-lo)/n;e.textContent=`每格 ${F(st,0)} 美元，约 ${(st/((lo+hi)/2)*100).toFixed(2)}%；扣掉 0.2% 手续费后每次来回约赚 ${(st/((lo+hi)/2)*100-0.2).toFixed(2)}%。`}else e.textContent='开始前 60 根 K 线的区间：'+F(Math.min(...u.bars.slice(0,60).map(x=>x[3])),0)+' – '+F(Math.max(...u.bars.slice(0,60).map(x=>x[2])),0)}
+  el.addEventListener('input',e=>{if(/l19sg(lo|hi|n)/.test(e.target.id))info(ui)});
+  const o=K.redraw.l19;K.redraw.l19=()=>{o&&o();ui.redraw()};ui.start()});
+}
 </script><script>{
 const K=KL,$=s=>document.querySelector(s),v=n=>+$(`input[name=${n}]:checked`).value,pc=(x,d=1)=>`<span class="${x>=0?'up':'dn'}">${x>=0?'+':''}${(x*100).toFixed(d)}%</span>`;
 const CO=['btc','eth','doge','xrp','bnb','ada','link','uni','aave','ltc'];let A=null,L=null,coin='eth';
@@ -5986,6 +6235,33 @@ fetch('alts.json').then(r=>r.json()).then(x=>{A=x;$('#l20coin').innerHTML=CO.map
   $('#l20coin').addEventListener('click',e=>{const b=e.target.closest('.chip');if(!b)return;coin=b.dataset.c;document.querySelectorAll('#l20coin .chip').forEach(z=>z.classList.toggle('on',z===b));draw1()});draw1();draw2()});
 (window.__btcLong||(window.__btcLong=fetch('btc_long.json').then(r=>r.json()))).then(x=>{L=x;draw2();draw3()});
 }
+{
+const K=KL,F=K.fmt;
+function bb(B){const n=B.length,c=B.map(x=>x[4]),mid=Array(n).fill(null),up=Array(n).fill(null),dn=Array(n).fill(null),atr=Array(n).fill(null);
+  for(let i=19;i<n;i++){let s=0,s2=0;for(let j=i-19;j<=i;j++){s+=c[j];s2+=c[j]*c[j]}const m=s/20,sd=Math.sqrt(Math.max(0,s2/20-m*m));mid[i]=m;up[i]=m+2*sd;dn[i]=m-2*sd}
+  let a=null;for(let i=1;i<n;i++){const tr=Math.max(B[i][2]-B[i][3],Math.abs(B[i][2]-c[i-1]),Math.abs(B[i][3]-c[i-1]));a=a==null?tr:(a*13+tr)/14;if(i>=14)atr[i]=a}
+  return{mid,up,dn,atr,lines:[{v:mid,c:'#0ea5e9',w:1.6},{v:up,c:'#94a3b8',w:1},{v:dn,c:'#94a3b8',w:1}],band:[up,dn,'rgba(14,165,233,.07)']}}
+const el=document.getElementById('l20sim'),P='l20s';
+K.ready.push(()=>{const ui=K.sim(el,{id:P,tf:'h4',warm:60,len:180,fee:0.001,maxLev:1,cash:10000,short:false,ind:bb,
+  wins:[{a:'2026-03-05'},{a:'2025-08-01'},{a:'2025-11-03'},{a:'2026-10-01'}],
+  intro:'<b>规则：</b>收盘价跌破布林带下轨（下面那条灰线）时买入；回到中轨（蓝线）时卖出；止损设在入场价下方 2 倍 ATR。<br>用"下一根"往前走，等信号出现再下单。下面的工具可以一键算出止损和止盈。',
+  tools:{html:`<h3>布林带工具</h3><p class="num" data-g="v"></p><div class="row"><button class="btn" data-a="b-sl">止损 = 现价 − 2×ATR</button><button class="btn" data-a="b-tp">持仓止盈移到中轨</button></div><label class="row"><input type="checkbox" id="${P}fol"> 每根 K 线自动把止盈移到中轨（中轨在现价下方时直接平仓）</label>`,
+   init(u){u.st.ent=[];vals(u)},
+   bar(u){vals(u);const e=u.eng,i=e.cur;if(el.querySelector(`#${P}fol`).checked&&e.q>0){const m=u.ind.mid[i];if(m<=u.bars[i][4]){e.close(1,'回到中轨平仓');u.tip('价格已经回到中轨上方，按规则平仓（下一根开盘成交）。')}else e.tp=m}},
+   click(A,u){const e=u.eng,i=e.cur,I=u.ind;if(A==='b-sl'){el.querySelector(`#${P}sl`).value=Math.round(u.bars[i][4]-2*I.atr[i]);u.tip(`止损已填入：${F(u.bars[i][4]-2*I.atr[i],0)}。`);el.querySelector(`#${P}z`).dispatchEvent(new Event('input',{bubbles:true}))}
+     if(A==='b-tp'){if(!e.q)return u.tip('现在没有持仓。');const m=I.mid[i];if(m<=e.px())return u.tip('中轨已经在现价下方了，按规则应该直接平仓。');e.tp=m;u.tip(`持仓止盈设在中轨 ${F(m,0)}。中轨会移动，记得每隔几根更新一次，或者勾选自动。`);u.draw()}}},
+  coach(ev,u){const e=u.eng,i=e.cur,I=u.ind,c=u.bars[i][4];if(ev.kind==='order'&&!ev.reduce&&ev.o.side>0){const ok=c<I.dn[i];u.st.ent.push({ok,sl:!!ev.o.sl});
+      return (ok?`✓ 收盘 ${F(c,0)} 在下轨 ${F(I.dn[i],0)} 下方，符合规则。`:`✗ 收盘 ${F(c,0)} 不在下轨 ${F(I.dn[i],0)} 下方，这一笔不符合"跌破下轨买入"。`)+(ev.o.sl?' ✓ 带了止损。':' ✗ 没有止损。')}
+    if(ev.kind==='fill'&&ev.fills.some(f=>f.why==='止损'))return '止损了。这正是均值回归的风险：跌破下轨之后继续往下走，没有回到中轨。';return''},
+  botName:'规则机器人',
+  bot(a){const e=a.e,i=e.cur,I=a.ind,c=a.B[i][4];if(!e.q&&!e.orders.length&&c<I.dn[i])e.place({side:1,type:'market',qty:a.cap(0.95),sl:c-2*I.atr[i]});else if(e.q>0){if(c>=I.mid[i])e.close(1,'回到中轨平仓');else e.tp=I.mid[i]}},
+  review(E,bot,u){const en=u.st.ent,ok=en.filter(x=>x.ok).length,sl=en.filter(x=>x.sl).length,stops=E.fills.filter(f=>f.why==='止损').length;
+    if(!en.length)return '你这次没有开仓。在这段行情里，规则机器人开了 '+(bot?bot.fills.filter(f=>f.side>0).length:0)+' 次仓。';
+    return [`你开了 ${en.length} 次仓，其中 ${ok} 次符合"收盘跌破下轨"，${sl} 次带了止损。`,stops?`有 ${stops} 次止损被触发：这些就是"跌破下轨后没回来"的情况。`:'这段时间没有触发止损。',
+     '规则机器人严格按"收盘跌破下轨买入，收盘回到中轨卖出，止损 2 倍 ATR"执行。看看它和你的差别主要来自哪里：入场的时机，还是离场的耐心？'].join('<br>')}});
+  function vals(u){const i=u.eng.cur,I=u.ind;el.querySelector('[data-g=v]').innerHTML=`中轨 ${F(I.mid[i],0)} · 下轨 ${F(I.dn[i],0)} · 上轨 ${F(I.up[i],0)} · ATR ${F(I.atr[i],0)}${u.bars[i][4]<I.dn[i]?' · <b class="up">收盘在下轨下方：买入信号</b>':''}`}
+  const o=K.redraw.l20;K.redraw.l20=()=>{o&&o();ui.redraw()};ui.start()});
+}
 </script><script>{
 const K=KL,$=s=>document.querySelector(s),pc=(x,d=1)=>`<span class="${x>=0?'up':'dn'}">${x>=0?'+':''}${(x*100).toFixed(d)}%</span>`;
 let H=null,EV=[];
@@ -6037,6 +6313,40 @@ K.quiz($('#l21quiz'),[
 
 K.redraw.l21=()=>{draw1();if(cur)show(ans?24:0)};
 K.ready.push(d=>{H=d.h4;draw1();pick();draw3()});
+}
+{
+const K=KL,F=K.fmt;
+const el=document.getElementById('l21sim'),P='l21s';
+K.ready.push(()=>{const ui=K.sim(el,{id:P,tf:'h4',warm:60,len:180,fee:0.0005,maxLev:2,cash:10000,short:true,
+  wins:[{a:'2025-08-01'},{a:'2026-03-05'},{a:'2025-06-01'},{a:'2025-11-03'}],
+  intro:'<b>任务：</b>先在"开始"线左边找出区间，用下面的工具点图设好支撑和阻力。<br><b>规则：</b>靠近支撑（区间下方 1/4）买入，止损放在支撑下方约 1%；靠近阻力（上方 1/4）做空，止损放在阻力上方约 1%。目标是区间的另一侧。每笔亏损控制在资金的 1%（仓位选"按止损风险"）。收盘真正突破区间后，停止在这个区间里来回做。',
+  tools:{html:`<h3>区间工具</h3><div class="simf"><label for="${P}rs">支撑</label><input id="${P}rs" inputmode="decimal"><label for="${P}rr">阻力</label><input id="${P}rr" inputmode="decimal"></div>
+<div class="row chips"><span class="note">点图表设：</span><button class="chip" data-a="r-s">支撑</button><button class="chip" data-a="r-r">阻力</button></div><p class="note" data-g="i"></p>
+<div class="row"><button class="btn" data-a="r-long">按规则填多单</button><button class="btn" data-a="r-short">按规则填空单</button></div><p class="note">"按规则填"只会填好下单表格（限价、止损、止盈、1% 风险），你确认后再点"下单"。</p>`,
+   init(u){u.st={ent:[],t:null};['rs','rr'].forEach(k=>el.querySelector(`#${P}${k}`).value='');info(u)},
+   click(A,u){if(A==='r-s'||A==='r-r'){u.st.t=u.st.t===A?null:A;el.querySelectorAll('[data-a^="r-"].chip').forEach(z=>z.classList.toggle('on',z.dataset.a===u.st.t));return}
+     const s=+v('rs'),r=+v('rr');if(!(s>0&&r>s))return u.tip('先设好支撑和阻力（阻力要高于支撑）。');const w=r-s;
+     const fill=(d,p,sl,tp)=>{el.querySelector(`#${P}d${d>0?1:2}`).checked=true;el.querySelector(`#${P}t2`).checked=true;el.querySelector(`#${P}p`).value=Math.round(p);el.querySelector(`#${P}sl`).value=Math.round(sl);el.querySelector(`#${P}tp`).value=Math.round(tp);el.querySelector(`#${P}m2`).checked=true;const z=el.querySelector(`#${P}z`);z.max=300;z.value=100;z.dispatchEvent(new Event('input',{bubbles:true}));const det=el.querySelector('details.simbox');det.open=true;
+       u.tip(`已填好${d>0?'多单':'空单'}：限价 ${F(p,0)}，止损 ${F(sl,0)}，止盈 ${F(tp,0)}，风险回报比 ${(Math.abs(tp-p)/Math.abs(p-sl)).toFixed(1)}。检查一下，然后在"手动下单"里点"下单"。`)};
+     if(A==='r-long')fill(1,s+0.2*w,s*0.99,r-0.2*w);if(A==='r-short')fill(-1,r-0.2*w,r*1.01,s+0.2*w)},
+   tap(p,u){if(!u.st.t)return false;el.querySelector(`#${P}${u.st.t==='r-s'?'rs':'rr'}`).value=p;info(u);return true},
+   lines(u){const s=+v('rs'),r=+v('rr'),L=[];if(s>0)L.push({p:s,c:'#0ea5e9',t:'支撑',w:2});if(r>0)L.push({p:r,c:'#0ea5e9',t:'阻力',w:2});if(s>0&&r>s){L.push({p:s+(r-s)*.25,c:'#94a3b8',t:'下 1/4',d:1});L.push({p:r-(r-s)*.25,c:'#94a3b8',t:'上 1/4',d:1})}return L},
+   bar(u){info(u);const s=+v('rs'),r=+v('rr'),c=u.bars[u.eng.cur][4];if(s>0&&r>s&&!u.st.brk&&(c>r*1.005||c<s*0.995)){u.st.brk=u.eng.cur;setTimeout(()=>u.tip(`<b>收盘${c>r?'站上阻力':'跌破支撑'}了。</b>这可能是真突破，也可能是假突破。按区间交易的规则：持有反方向仓位的要止损，之后不要再在这个区间里高抛低吸，除非价格重新回到区间里并站稳。`),0)}}},
+  coach(ev,u){if(ev.kind!=='order'||ev.reduce)return'';const o=ev.o,s=+v('rs'),r=+v('rr'),ep=ev.ep,out=[];
+    if(!(s>0&&r>s))out.push('还没有画区间，先用区间工具设好支撑和阻力。');else{const pos=(ep-s)/(r-s);out.push(o.side>0?(pos<=0.3?`✓ 在区间下方 ${Math.round(pos*100)}% 的位置买入。`:`✗ 在区间 ${Math.round(pos*100)}% 的位置买入，离支撑太远。`):(pos>=0.7?`✓ 在区间上方 ${Math.round(pos*100)}% 的位置做空。`:`✗ 在区间 ${Math.round(pos*100)}% 的位置做空，离阻力太远。`))}
+    if(!o.sl)out.push('✗ 没有止损。区间交易和网格的区别就在于有止损。');else if(o.tp){const rr=Math.abs(o.tp-ep)/Math.abs(ep-o.sl);out.push(rr>=1.5?`✓ 风险回报比 ${rr.toFixed(1)}。`:`✗ 风险回报比只有 ${rr.toFixed(1)}，至少要 1.5。`)}
+    if(u.st.brk!=null)out.push('注意：区间已经被突破过了。');u.st.ent.push({ok:!out.some(x=>x.startsWith('✗'))});return out.join(' ')},
+  botName:'规则机器人',
+  bot(a){const e=a.e,st=a.st;if(st.s==null){const w=a.B.slice(0,a.warm);st.s=Math.min(...w.map(x=>x[3]));st.r=Math.max(...w.map(x=>x[2]))}const i=e.cur,c=a.B[i][4],s=st.s,r=st.r,w=r-s;
+    if(c>r*1.005||c<s*0.995)st.brk=1;if(st.brk||e.q||e.orders.length)return;
+    const go=(d,sl,tp)=>{const q=e.equity()*0.01/Math.abs(c-sl);e.place({side:d,type:'market',qty:q,sl,tp})};
+    if(c<=s+0.25*w&&c>s)go(1,s*0.99,r-0.2*w);else if(c>=r-0.25*w&&c<r)go(-1,r*1.01,s+0.2*w)},
+  review(E,bot,u){const n=u.st.ent.length,ok=u.st.ent.filter(x=>x.ok).length;const s=+v('rs'),r=+v('rr');
+    return [n?`你开了 ${n} 笔仓，其中 ${ok} 笔完全符合规则（位置、止损、风险回报比）。`:'你这次没有开仓。',u.st.brk!=null?`区间在第 ${u.st.brk-59} 根被收盘突破。突破之后还在区间里来回做，是区间交易最常见的亏损来源。`:'这段时间区间没有被收盘突破。',
+      s>0&&r>s?`你画的区间宽度约 ${((r-s)/s*100).toFixed(1)}%。区间太窄时，手续费和止损余量会吃掉大部分利润。`:'',`规则机器人用"开始"前 60 根 K 线的最高价和最低价做区间，每笔风险 1%，突破后停手。`].filter(Boolean).join('<br>')}});
+  function v(id){return el.querySelector(`#${P}${id}`).value}
+  function info(u){const s=+v('rs'),r=+v('rr'),c=u.bars[u.eng.cur][4],e=el.querySelector('[data-g=i]');if(s>0&&r>s)e.textContent=`区间宽 ${F(r-s,0)}（${((r-s)/s*100).toFixed(1)}%），现价在区间的 ${Math.round((c-s)/(r-s)*100)}% 位置。`;else e.textContent='"开始"前 60 根 K 线：最低 '+F(Math.min(...u.bars.slice(0,60).map(x=>x[3])),0)+'，最高 '+F(Math.max(...u.bars.slice(0,60).map(x=>x[2])),0)+'。可以参考，也可以自己找。'}
+  const o=K.redraw.l21;K.redraw.l21=()=>{o&&o();ui.redraw()};ui.start()});
 }
 </script><script>{
 const K=KL,$=s=>document.querySelector(s),pc=(x,d=1)=>`<span class="${x>=0?'up':'dn'}">${x>=0?'+':''}${(x*100).toFixed(d)}%</span>`;
@@ -6092,6 +6402,36 @@ K.redraw.l22=()=>{draw1();draw2()};
 draw1();draw3();
 fetch('alts.json').then(r=>r.json()).then(x=>{A=x;$('#l22coin').innerHTML=CO.map(c=>`<button class="chip${c===coin?' on':''}" data-c="${c}">${c.toUpperCase()}</button>`).join('');
   $('#l22coin').addEventListener('click',e=>{const b=e.target.closest('.chip');if(!b)return;coin=b.dataset.c;document.querySelectorAll('#l22coin .chip').forEach(z=>z.classList.toggle('on',z===b));draw2()});draw2()});
+}
+{
+const K=KL,F=K.fmt;
+const el=document.getElementById('l22sim'),P='l22s';
+function par(){const g=id=>+el.querySelector(`#${P}${id}`).value;return{b:g('mb')/100,st:g('ms')/100,m:g('mm'),L:Math.round(g('ml')),tp:g('mt')/100}}
+function layer(e,st,p,k){const q=st.q0*Math.pow(p.m,k),px=st.p1*Math.pow(1-p.st,k);return e.place({side:1,type:'limit',p:px,qty:q,tag:'mg',keep:true,why:`补仓第 ${k} 层`,onFill:()=>{st.k=Math.max(st.k,k);e.tp=e.A*(1+p.tp)}})}
+function open1(e,st,p,px){st.q0=e.equity()*p.b/px;st.k=0;st.p1=null;st.round=(st.round||0)+1;e.place({side:1,type:'market',qty:st.q0,tag:'mg',why:'首单',onFill:(o,fp)=>{st.p1=fp;e.tp=fp*(1+p.tp)}})}
+K.ready.push(()=>{const ui=K.sim(el,{id:P,tf:'h4',warm:60,len:180,fee:0.0005,maxLev:5,cash:10000,short:false,
+  wins:[{a:'2025-08-01'},{a:'2025-11-03'},{a:'2026-10-01'},{a:'2026-03-05'}],
+  intro:'<b>你是一个补仓交易者（最高 5 倍杠杆）。</b>先在下面设好补仓规则：首单多大、每跌多少补一次、每次补的量是上一次的几倍、最多补几次、反弹多少止盈。然后开首单，价格每跌一层就补一单。图上紫色的线是强平价。',
+  tools:{html:`<h3>补仓规则</h3><div class="simf"><label for="${P}mb">首单（占资金 %）</label><input id="${P}mb" inputmode="decimal" value="10"><label for="${P}ms">每跌多少补（%）</label><input id="${P}ms" inputmode="decimal" value="3"><label for="${P}mm">补仓倍数</label><input id="${P}mm" inputmode="decimal" value="2"><label for="${P}ml">最多补几次</label><input id="${P}ml" inputmode="numeric" value="4"><label for="${P}mt">均价上方多少止盈（%）</label><input id="${P}mt" inputmode="decimal" value="1.5"></div>
+<p class="note" data-g="i"></p><div class="row"><button class="btn pri" data-a="m-open">开首单</button><button class="btn" data-a="m-next">挂下一层补仓</button><button class="btn" data-a="m-all">挂满所有层</button><button class="btn" data-a="m-x">撤补仓单</button></div>`,
+   init(u){u.st={k:0,maxk:0,maxlev:0,rounds:0};info(u)},
+   click(A,u){const e=u.eng,st=u.st,p=par();
+     if(A==='m-open'){if(e.q)return u.tip('已经有持仓了。一轮止盈或止损之后再开新的首单。');open1(e,st,p,e.px());u.tip('首单是市价单，下一根开盘成交，止盈会自动设在均价上方。');u.draw()}
+     if(A==='m-next'||A==='m-all'){if(!e.q||!st.p1)return u.tip('先开首单，等它成交。');const have=new Set(e.orders.filter(x=>x.tag==='mg').map(x=>x.why));let n=0;
+       for(let k=st.k+1;k<=p.L;k++){if(have.has(`补仓第 ${k} 层`))continue;layer(e,st,p,k);n++;if(A==='m-next')break}
+       u.tip(n?`挂了 ${n} 层补仓单。看看图上的强平价：挂满之后它会在哪里？`:'已经挂满了，或者已经补到最后一层。');u.draw()}
+     if(A==='m-x'){e.cancelAll('mg');u.tip('补仓单已撤掉。');u.draw()}},
+   bar(u){const e=u.eng,st=u.st;info(u);st.maxk=Math.max(st.maxk,st.k);st.maxlev=Math.max(st.maxlev,e.q?e.lev():0);if(!e.q&&st.p1&&e.orders.some(x=>x.tag==='mg')){e.cancelAll('mg');st.p1=null;st.rounds++;st.k=0;setTimeout(()=>u.tip('<b>这一轮止盈了。</b>剩下的补仓单已撤掉。可以再开一轮首单。'),0)}else if(!e.q&&st.p1){st.p1=null;st.rounds++;st.k=0}}},
+  coach(ev,u){if(ev.kind!=='fill')return'';const e=u.eng,f=ev.fills.find(x=>x.why.startsWith('补仓'));if(!f||!e.q)return'';const lq=e.liqPx();return `现在持仓 ${e.q.toFixed(4)} BTC，均价 ${F(e.A,0)}，杠杆 ${e.lev().toFixed(1)} 倍${lq?`，强平价 ${F(lq,0)}，离现价 ${((1-lq/e.px())*100).toFixed(1)}%`:''}。`},
+  botName:'规则补仓',
+  bot(a){const e=a.e,st=a.st;if(!st.p)st.p=par();const p=st.p;if(!e.q&&!e.orders.length){open1(e,st,p,e.px());return}if(e.q&&st.p1&&!st.laid){st.laid=1;for(let k=1;k<=p.L;k++)layer(e,st,p,k)}if(!e.q&&e.orders.length){e.cancelAll('mg');st.laid=0}},
+  review(E,bot,u){const st=u.st,p=par();let tot=0;for(let k=0;k<=p.L;k++)tot+=Math.pow(p.m,k);
+    return [E.liq?'<b>你爆仓了。</b>补仓让仓位越来越大，强平价越来越近，最后一次没反弹就结束了。':`你完成了 ${st.rounds} 轮，最深补到第 ${st.maxk} 层，最高杠杆 ${st.maxlev.toFixed(1)} 倍。`,
+      `按你的规则，补满 ${p.L} 次需要首单的 ${F(tot,0)} 倍资金，也就是总资金的 ${(p.b*tot*100).toFixed(0)}%${p.b*tot>1?`，要用 ${(p.b*tot).toFixed(1)} 倍杠杆`:''}。最后一层在首单价下方 ${((1-Math.pow(1-p.st,p.L))*100).toFixed(0)}%。`,
+      '规则补仓用你设的同一套参数，一直开新的一轮。看看收益曲线：是不是大部分时间缓慢上涨，偶尔一次大跌？这就是第 22 课说的"高胜率、小盈利、偶尔大亏"。'].join('<br>')}});
+  function info(u){const p=par(),e=el.querySelector('[data-g=i]');let tot=0;for(let k=0;k<=p.L;k++)tot+=Math.pow(p.m,k);e.textContent=`补满需要首单的 ${F(tot,0)} 倍，占资金 ${(p.b*tot*100).toFixed(0)}%；最后一层在首单下方 ${((1-Math.pow(1-p.st,p.L))*100).toFixed(1)}%。`}
+  el.addEventListener('input',e=>{if(e.target.id.startsWith(P+'m'))info(ui)});
+  const o=K.redraw.l22;K.redraw.l22=()=>{o&&o();ui.redraw()};ui.start()});
 }
 </script><script>{
 const K=KL,$=s=>document.querySelector(s),v=n=>+$(`input[name=${n}]:checked`).value,pc=(x,d=0)=>`<span class="${x>=0?'up':'dn'}">${x>=9?Math.round(x+1)+' 倍':(x>=0?'+':'')+(x*100).toFixed(d)+'%'}</span>`;
