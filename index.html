@@ -3331,7 +3331,13 @@ button.pri,.btn.pri{background:var(--acc);color:#fff;border-color:var(--acc)}
 </article>
 <p class="next"><a href="#l24-video">下一课：第24课 突破交易与海龟法则 →</a></p></div>
 <div class="panel" id="l23-video"><div class="vid"><video controls playsinline preload="none" poster="video/poster23.jpg" data-src="video/lesson23.mp4"></video><div><h3 style="margin-top:0">章节</h3><p class="note">无配音，看字幕即可。点章节可以跳转。</p><ol class="chap"><li><button data-t="0"><span class="num">0:00</span>开场</button></li><li><button data-t="4.5"><span class="num">0:04</span>想法</button></li><li><button data-t="14.5"><span class="num">0:14</span>回测</button></li><li><button data-t="25.0"><span class="num">0:25</span>收益形状</button></li><li><button data-t="35.0"><span class="num">0:35</span>Michael Liu</button></li><li><button data-t="45.0"><span class="num">0:45</span>熬鹰</button></li><li><button data-t="54.5"><span class="num">0:54</span>规则</button></li></ol></div></div></div>
-<div class="panel" id="l23-practice"><p class="lead" style="margin-top:12px">所有K线都是比特币的真实成交数据（Bitstamp BTC/USD，2025-01-07 至 <span class="asof num">—</span>），时间均为 UTC。</p><nav class="toc"><a href="#l23k1">均线趋势跟随回测</a><a href="#l23k2">参数换一换，结果差多少</a><a href="#l23k3">钱是哪几笔赚的</a><a href="#l23k4">小测验</a></nav><section id="l23k1">
+<div class="panel" id="l23-practice"><p class="lead" style="margin-top:12px">所有K线都是比特币的真实成交数据（Bitstamp BTC/USD，2025-01-07 至 <span class="asof num">—</span>），时间均为 UTC。</p><nav class="toc"><a href="#l23k0">实战：严格执行均线规则</a><a href="#l23k1">均线趋势跟随回测</a><a href="#l23k2">参数换一换，结果差多少</a><a href="#l23k3">钱是哪几笔赚的</a><a href="#l23k4">小测验</a></nav><section id="l23k0">
+<h2>实战：严格执行均线规则</h2>
+<p class="lead">真实的比特币日 K 线，日期先隐藏。本金 10,000 美元现货，手续费 0.1%。每走一根就是一天，按 50 日均线规则自己买卖，走完 200 天后和"每天都严格执行"的机器人比一比。</p>
+<div id="l23sim"></div>
+</section>
+
+<section id="l23k1">
 <h2>练习 1：均线趋势跟随回测</h2>
 <p class="lead">最简单的趋势跟随规则：收盘价在均线<b>上方</b>就持有，跌到均线<b>下方</b>就卖出拿现金。只做多，每次买卖手续费 0.1%。</p>
 <div class="row seg" role="radiogroup" aria-label="数据"><span>数据</span><input type="radio" name="l23z" id="l23q1" value="0" checked><label for="l23q1">比特币 2016 起</label><input type="radio" name="l23z" id="l23q2" value="1"><label for="l23q2">比特币 2025 起</label><input type="radio" name="l23z" id="l23q3" value="2"><label for="l23q3">山寨币</label></div>
@@ -3434,7 +3440,13 @@ button.pri,.btn.pri{background:var(--acc);color:#fff;border-color:var(--acc)}
 </article>
 <p class="next"><a href="#l25-video">下一课：第25课 回调入场 →</a></p></div>
 <div class="panel" id="l24-video"><div class="vid"><video controls playsinline preload="none" poster="video/poster24.jpg" data-src="video/lesson24.mp4"></video><div><h3 style="margin-top:0">章节</h3><p class="note">无配音，看字幕即可。点章节可以跳转。</p><ol class="chap"><li><button data-t="0"><span class="num">0:00</span>开场</button></li><li><button data-t="4.5"><span class="num">0:04</span>规则</button></li><li><button data-t="14.5"><span class="num">0:14</span>回测</button></li><li><button data-t="25.0"><span class="num">0:25</span>连亏</button></li><li><button data-t="35.0"><span class="num">0:35</span>熬鹰</button></li><li><button data-t="45.0"><span class="num">0:45</span>规则</button></li></ol></div></div></div>
-<div class="panel" id="l24-practice"><p class="lead" style="margin-top:12px">所有K线都是比特币的真实成交数据（Bitstamp BTC/USD，2025-01-07 至 <span class="asof num">—</span>），时间均为 UTC。</p><nav class="toc"><a href="#l24k1">海龟式突破系统</a><a href="#l24k2">海龟的仓位计算</a><a href="#l24k3">你扛得住连亏吗</a><a href="#l24k4">小测验</a></nav><section id="l24k1">
+<div class="panel" id="l24-practice"><p class="lead" style="margin-top:12px">所有K线都是比特币的真实成交数据（Bitstamp BTC/USD，2025-01-07 至 <span class="asof num">—</span>），时间均为 UTC。</p><nav class="toc"><a href="#l24k0">实战：当一次海龟</a><a href="#l24k1">海龟式突破系统</a><a href="#l24k2">海龟的仓位计算</a><a href="#l24k3">你扛得住连亏吗</a><a href="#l24k4">小测验</a></nav><section id="l24k0">
+<h2>实战：当一次海龟</h2>
+<p class="lead">真实的比特币日 K 线，日期先隐藏。本金 10,000 美元，最高 3 倍杠杆，手续费 0.1%。用突破单入场、按 N 算仓位、逐个单位加仓、跟着 10 日低点离场。</p>
+<div id="l24sim"></div>
+</section>
+
+<section id="l24k1">
 <h2>练习 1：海龟式突破系统</h2>
 <p class="lead">规则：收盘价创<b>最近 N1 天新高</b>就买入（做空则相反），跌破<b>最近 N2 天新低</b>就离场。仓位按波动大小计算：每个"单位"在止损时最多亏账户的 1%，止损放在入场价下方 2 个 N（N 是最近 20 天的平均日波动）。数据是比特币日线。</p>
 <div class="row seg" role="radiogroup" aria-label="数据"><span>数据</span><input type="radio" name="l24z" id="l24y1" value="0" checked><label for="l24y1">2016-09 起</label><input type="radio" name="l24z" id="l24y2" value="1"><label for="l24y2">2025 起</label></div>
@@ -3542,7 +3554,13 @@ button.pri,.btn.pri{background:var(--acc);color:#fff;border-color:var(--acc)}
 </article>
 <p class="next"><a href="#l26-video">下一课：第26课 滚仓与金字塔加仓 →</a></p></div>
 <div class="panel" id="l25-video"><div class="vid"><video controls playsinline preload="none" poster="video/poster25.jpg" data-src="video/lesson25.mp4"></video><div><h3 style="margin-top:0">章节</h3><p class="note">无配音，看字幕即可。点章节可以跳转。</p><ol class="chap"><li><button data-t="0"><span class="num">0:00</span>开场</button></li><li><button data-t="4.5"><span class="num">0:04</span>三重滤网</button></li><li><button data-t="14.5"><span class="num">0:14</span>数据</button></li><li><button data-t="25.0"><span class="num">0:25</span>踏空</button></li><li><button data-t="35.0"><span class="num">0:35</span>熬鹰</button></li><li><button data-t="45.5"><span class="num">0:45</span>规则</button></li></ol></div></div></div>
-<div class="panel" id="l25-practice"><p class="lead" style="margin-top:12px">所有K线都是比特币的真实成交数据（Bitstamp BTC/USD，2025-01-07 至 <span class="asof num">—</span>），时间均为 UTC。</p><nav class="toc"><a href="#l25k1">上升趋势里，什么时候买更好</a><a href="#l25k2">等回调的代价</a><a href="#l25k3">追，还是等？</a><a href="#l25k4">小测验</a></nav><section id="l25k1">
+<div class="panel" id="l25-practice"><p class="lead" style="margin-top:12px">所有K线都是比特币的真实成交数据（Bitstamp BTC/USD，2025-01-07 至 <span class="asof num">—</span>），时间均为 UTC。</p><nav class="toc"><a href="#l25k0">实战：等回调再上车</a><a href="#l25k1">上升趋势里，什么时候买更好</a><a href="#l25k2">等回调的代价</a><a href="#l25k3">追，还是等？</a><a href="#l25k4">小测验</a></nav><section id="l25k0">
+<h2>实战：等回调再上车</h2>
+<p class="lead">真实的比特币日 K 线，日期先隐藏。本金 10,000 美元，手续费 0.1%。先确认大方向，再等回调结束的信号，止损放在回调低点下方，每笔风险 1%。</p>
+<div id="l25sim"></div>
+</section>
+
+<section id="l25k1">
 <h2>练习 1：上升趋势里，什么时候买更好</h2>
 <p class="lead">先用均线定义<b>上升趋势</b>：收盘价在长期均线上方，并且长期均线比 20 天前高。然后比较四种买入时机之后的表现。数据是比特币 2016 年 9 月以来的日线。</p>
 <div class="row seg" role="radiogroup" aria-label="趋势均线"><span>趋势均线</span><input type="radio" name="l25m" id="l25m1" value="50"><label for="l25m1">50 日</label><input type="radio" name="l25m" id="l25m2" value="100" checked><label for="l25m2">100 日</label><input type="radio" name="l25m" id="l25m3" value="200"><label for="l25m3">200 日</label></div>
@@ -3645,7 +3663,13 @@ button.pri,.btn.pri{background:var(--acc);color:#fff;border-color:var(--acc)}
 </article>
 <p class="next"><a href="#l27-video">下一课：第27课 动量轮动：强者恒强 →</a></p></div>
 <div class="panel" id="l26-video"><div class="vid"><video controls playsinline preload="none" poster="video/poster26.jpg" data-src="video/lesson26.mp4"></video><div><h3 style="margin-top:0">章节</h3><p class="note">无配音，看字幕即可。点章节可以跳转。</p><ol class="chap"><li><button data-t="0"><span class="num">0:00</span>开场</button></li><li><button data-t="4.5"><span class="num">0:04</span>三种做法</button></li><li><button data-t="14.5"><span class="num">0:14</span>滚仓的数学</button></li><li><button data-t="24.5"><span class="num">0:24</span>回测</button></li><li><button data-t="35.0"><span class="num">0:35</span>熬鹰</button></li><li><button data-t="45.0"><span class="num">0:45</span>规则</button></li></ol></div></div></div>
-<div class="panel" id="l26-practice"><p class="lead" style="margin-top:12px">所有K线都是比特币的真实成交数据（Bitstamp BTC/USD，2025-01-07 至 <span class="asof num">—</span>），时间均为 UTC。</p><nav class="toc"><a href="#l26k1">在真实趋势里滚仓</a><a href="#l26k2">赢了之后，一次回调能吃掉多少</a><a href="#l26k3">小测验</a></nav><section id="l26k1">
+<div class="panel" id="l26-practice"><p class="lead" style="margin-top:12px">所有K线都是比特币的真实成交数据（Bitstamp BTC/USD，2025-01-07 至 <span class="asof num">—</span>），时间均为 UTC。</p><nav class="toc"><a href="#l26k0">实战：盈利加仓与滚仓</a><a href="#l26k1">在真实趋势里滚仓</a><a href="#l26k2">赢了之后，一次回调能吃掉多少</a><a href="#l26k3">小测验</a></nav><section id="l26k0">
+<h2>实战：盈利加仓与滚仓</h2>
+<p class="lead">真实的比特币日 K 线，日期先隐藏。合约本金 10,000 美元，最高 5 倍杠杆，手续费 0.05%。选金字塔或滚仓，一次次加仓，看着强平价怎么移动。</p>
+<div id="l26sim"></div>
+</section>
+
+<section id="l26k1">
 <h2>练习 1：在真实趋势里滚仓</h2>
 <p class="lead">选一段真实的比特币趋势（日线），用 10,000 美元开合约。比较三种做法：<b>固定仓位</b>（开仓后不加）、<b>金字塔加仓</b>（每赚一段加一次，每次加的比上次少一半）、<b>滚仓</b>（每赚一段，就把仓位重新加到"当前资金 × 杠杆"）。强平按日内最高最低价判断，维持保证金率 0.5%，手续费 0.05%。</p>
 <div class="row seg" role="radiogroup" aria-label="行情"><span>行情</span><input type="radio" name="l26w" id="l26w1" value="0" checked><label for="l26w1">干净上涨</label><input type="radio" name="l26w" id="l26w2" value="1"><label for="l26w2">涨中有回调</label><input type="radio" name="l26w" id="l26w3" value="2"><label for="l26w3">单边下跌（做空）</label><input type="radio" name="l26w" id="l26w4" value="3"><label for="l26w4">反弹（做多）</label></div>
@@ -3746,7 +3770,13 @@ button.pri,.btn.pri{background:var(--acc);color:#fff;border-color:var(--acc)}
 </article>
 <p class="next"><a href="#l28-video">下一课：第28课 定投、价值平均与一次性买入 →</a></p></div>
 <div class="panel" id="l27-video"><div class="vid"><video controls playsinline preload="none" poster="video/poster27.jpg" data-src="video/lesson27.mp4"></video><div><h3 style="margin-top:0">章节</h3><p class="note">无配音，看字幕即可。点章节可以跳转。</p><ol class="chap"><li><button data-t="0"><span class="num">0:00</span>开场</button></li><li><button data-t="4.5"><span class="num">0:04</span>两种动量</button></li><li><button data-t="14.5"><span class="num">0:14</span>回测</button></li><li><button data-t="25.0"><span class="num">0:25</span>注意</button></li><li><button data-t="35.0"><span class="num">0:35</span>0xSun</button></li><li><button data-t="45.0"><span class="num">0:45</span>第六章小结</button></li></ol></div></div></div>
-<div class="panel" id="l27-practice"><p class="lead" style="margin-top:12px">所有K线都是比特币的真实成交数据（Bitstamp BTC/USD，2025-01-07 至 <span class="asof num">—</span>），时间均为 UTC。</p><nav class="toc"><a href="#l27k1">强者恒强轮动</a><a href="#l27k2">涨得多的币，下周还涨吗</a><a href="#l27k3">小测验</a></nav><section id="l27k1">
+<div class="panel" id="l27-practice"><p class="lead" style="margin-top:12px">所有K线都是比特币的真实成交数据（Bitstamp BTC/USD，2025-01-07 至 <span class="asof num">—</span>），时间均为 UTC。</p><nav class="toc"><a href="#l27k0">实战：每周轮动 10 个币</a><a href="#l27k1">强者恒强轮动</a><a href="#l27k2">涨得多的币，下周还涨吗</a><a href="#l27k3">小测验</a></nav><section id="l27k0">
+<h2>实战：每周轮动 10 个币</h2>
+<p class="lead">10 个主流币的真实日线，日期先隐藏。本金 10,000 美元，每周看一次排名、选要持有的币，持有 26 周。</p>
+<div id="l27sim"></div>
+</section>
+
+<section id="l27k1">
 <h2>练习 1：强者恒强轮动</h2>
 <p class="lead">规则：在 10 个主流币里，每隔一段时间看一次过去 N 天谁涨得最多，只持有排名前 K 的币（平均分配），其他全部卖掉。和"10 个币平均买入一直拿着"以及"只拿比特币"对比。数据是 2025 年 1 月到 2026 年 10 月的日线，换仓手续费 0.1%。</p>
 <div class="row"><label for="l27lb">看过去几天</label><input type="range" id="l27lb" min="3" max="120" step="1" value="30"><strong class="num" id="l27lbv">—</strong></div>
@@ -3837,7 +3867,13 @@ button.pri,.btn.pri{background:var(--acc);color:#fff;border-color:var(--acc)}
 </article>
 <p class="next"><a href="#l29-video">下一课：第29课 组合再平衡 →</a></p></div>
 <div class="panel" id="l28-video"><div class="vid"><video controls playsinline preload="none" poster="video/poster28.jpg" data-src="video/lesson28.mp4"></video><div><h3 style="margin-top:0">章节</h3><p class="note">无配音，看字幕即可。点章节可以跳转。</p><ol class="chap"><li><button data-t="0"><span class="num">0:00</span>开场</button></li><li><button data-t="4.5"><span class="num">0:04</span>三种买法</button></li><li><button data-t="14.0"><span class="num">0:14</span>数据</button></li><li><button data-t="24.5"><span class="num">0:24</span>为什么定投</button></li><li><button data-t="34.5"><span class="num">0:34</span>价值平均</button></li><li><button data-t="44.0"><span class="num">0:44</span>川沐</button></li><li><button data-t="53.5"><span class="num">0:53</span>怎么选</button></li></ol></div></div></div>
-<div class="panel" id="l28-practice"><p class="lead" style="margin-top:12px">所有K线都是比特币的真实成交数据（Bitstamp BTC/USD，2025-01-07 至 <span class="asof num">—</span>），时间均为 UTC。</p><nav class="toc"><a href="#l28k1">一次性买入，还是分批定投</a><a href="#l28k2">定投和价值平均法</a><a href="#l28k3">小测验</a></nav><section id="l28k1">
+<div class="panel" id="l28-practice"><p class="lead" style="margin-top:12px">所有K线都是比特币的真实成交数据（Bitstamp BTC/USD，2025-01-07 至 <span class="asof num">—</span>），时间均为 UTC。</p><nav class="toc"><a href="#l28k0">实战：一次性、定投还是价值平均</a><a href="#l28k1">一次性买入，还是分批定投</a><a href="#l28k2">定投和价值平均法</a><a href="#l28k3">小测验</a></nav><section id="l28k0">
+<h2>实战：一次性、定投还是价值平均</h2>
+<p class="lead">真实的比特币日 K 线，日期先隐藏。10,000 美元现金，大约 29 周内买完。每周自己决定怎么买。</p>
+<div id="l28sim"></div>
+</section>
+
+<section id="l28k1">
 <h2>练习 1：一次性买入，还是分批定投</h2>
 <p class="lead">假设你手上有一笔钱要买比特币。一种做法是<b>今天一次性全买</b>，另一种是<b>平均分成 M 个月、每月买一份</b>。两种做法都在第 M 个月末比较结果。从 2016 年 1 月起，每个月都当一次起点，统计谁赢得多。</p>
 <div class="row"><label for="l28m">分几个月买完</label><input type="range" id="l28m" min="2" max="36" step="1" value="12"><strong class="num" id="l28mv">—</strong></div>
@@ -3929,7 +3965,13 @@ button.pri,.btn.pri{background:var(--acc);color:#fff;border-color:var(--acc)}
 </article>
 <p class="next"><a href="#l30-video">下一课：第30课 配对交易与统计套利 →</a></p></div>
 <div class="panel" id="l29-video"><div class="vid"><video controls playsinline preload="none" poster="video/poster29.jpg" data-src="video/lesson29.mp4"></video><div><h3 style="margin-top:0">章节</h3><p class="note">无配音，看字幕即可。点章节可以跳转。</p><ol class="chap"><li><button data-t="0"><span class="num">0:00</span>开场</button></li><li><button data-t="4.5"><span class="num">0:04</span>为什么</button></li><li><button data-t="14.0"><span class="num">0:14</span>2016 回测</button></li><li><button data-t="24.5"><span class="num">0:24</span>2021 回测</button></li><li><button data-t="35.0"><span class="num">0:35</span>香农的魔鬼</button></li><li><button data-t="45.0"><span class="num">0:45</span>规则</button></li></ol></div></div></div>
-<div class="panel" id="l29-practice"><p class="lead" style="margin-top:12px">所有K线都是比特币的真实成交数据（Bitstamp BTC/USD，2025-01-07 至 <span class="asof num">—</span>），时间均为 UTC。</p><nav class="toc"><a href="#l29k1">固定比例，定期调回去</a><a href="#l29k2">香农的魔鬼</a><a href="#l29k3">小测验</a></nav><section id="l29k1">
+<div class="panel" id="l29-practice"><p class="lead" style="margin-top:12px">所有K线都是比特币的真实成交数据（Bitstamp BTC/USD，2025-01-07 至 <span class="asof num">—</span>），时间均为 UTC。</p><nav class="toc"><a href="#l29k0">实战：管理一个 50/50 组合</a><a href="#l29k1">固定比例，定期调回去</a><a href="#l29k2">香农的魔鬼</a><a href="#l29k3">小测验</a></nav><section id="l29k0">
+<h2>实战：管理一个 50/50 组合</h2>
+<p class="lead">真实的比特币日 K 线，日期先隐藏。10,000 美元，一半比特币一半稳定币，什么时候调回 50% 由你决定。</p>
+<div id="l29sim"></div>
+</section>
+
+<section id="l29k1">
 <h2>练习 1：固定比例，定期调回去</h2>
 <p class="lead">设定一个目标比例，比如 50% 比特币、50% 现金（稳定币，假设无利息）。价格涨了，比特币占比变高，就卖一点调回 50%；跌了就买一点。和"买完不管"以及"全仓比特币"对比。</p>
 <div class="row seg" role="radiogroup" aria-label="组合"><span>组合</span><input type="radio" name="l29a" id="l29a1" value="0" checked><label for="l29a1">比特币 + 现金（2016-09 起）</label><input type="radio" name="l29a" id="l29a2" value="1"><label for="l29a2">比特币 + 现金（2021 起）</label><input type="radio" name="l29a" id="l29a3" value="2"><label for="l29a3">10 个币等权（2025 起）</label></div>
@@ -4024,7 +4066,13 @@ button.pri,.btn.pri{background:var(--acc);color:#fff;border-color:var(--acc)}
 </article>
 <p class="next"><a href="#l31-video">下一课：第31课 套利：搬砖、期现与资金费率 →</a></p></div>
 <div class="panel" id="l30-video"><div class="vid"><video controls playsinline preload="none" poster="video/poster30.jpg" data-src="video/lesson30.mp4"></video><div><h3 style="margin-top:0">章节</h3><p class="note">无配音，看字幕即可。点章节可以跳转。</p><ol class="chap"><li><button data-t="0"><span class="num">0:00</span>开场</button></li><li><button data-t="4.5"><span class="num">0:04</span>方法</button></li><li><button data-t="14.5"><span class="num">0:14</span>学术证据</button></li><li><button data-t="24.5"><span class="num">0:24</span>相关与协整</button></li><li><button data-t="35.0"><span class="num">0:35</span>川沐</button></li><li><button data-t="44.5"><span class="num">0:44</span>规则</button></li></ol></div></div></div>
-<div class="panel" id="l30-practice"><p class="lead" style="margin-top:12px">所有K线都是比特币的真实成交数据（Bitstamp BTC/USD，2025-01-07 至 <span class="asof num">—</span>），时间均为 UTC。</p><nav class="toc"><a href="#l30k1">做一对币的价差</a><a href="#l30k2">相关性高，就适合做配对吗</a><a href="#l30k3">小测验</a></nav><section id="l30k1">
+<div class="panel" id="l30-practice"><p class="lead" style="margin-top:12px">所有K线都是比特币的真实成交数据（Bitstamp BTC/USD，2025-01-07 至 <span class="asof num">—</span>），时间均为 UTC。</p><nav class="toc"><a href="#l30k0">实战：亲手做配对交易</a><a href="#l30k1">做一对币的价差</a><a href="#l30k2">相关性高，就适合做配对吗</a><a href="#l30k3">小测验</a></nav><section id="l30k0">
+<h2>实战：亲手做配对交易</h2>
+<p class="lead">两个币的真实日线，日期先隐藏。本金 10,000 美元，看 z 值开仓、平仓、止损，走完 180 天。</p>
+<div id="l30sim"></div>
+</section>
+
+<section id="l30k1">
 <h2>练习 1：做一对币的价差</h2>
 <p class="lead">选两个币 A 和 B，看它们的价格比值（取对数）。比值偏离最近 N 天的平均水平太远时：比值太高，就<b>做空 A、做多 B</b>；比值太低，就反过来。等比值回到平均水平附近再平仓。两边各占一半资金，<b>不赌整体涨跌</b>。每条腿每次手续费 0.1%。</p>
 <div class="row"><label for="l30a">币 A</label><select id="l30a"></select><label for="l30b">币 B</label><select id="l30b"></select></div>
@@ -4115,7 +4163,13 @@ button.pri,.btn.pri{background:var(--acc);color:#fff;border-color:var(--acc)}
 </article>
 <p class="next"><a href="#l32-video">下一课：第32课 期权基础策略 →</a></p></div>
 <div class="panel" id="l31-video"><div class="vid"><video controls playsinline preload="none" poster="video/poster31.jpg" data-src="video/lesson31.mp4"></video><div><h3 style="margin-top:0">章节</h3><p class="note">无配音，看字幕即可。点章节可以跳转。</p><ol class="chap"><li><button data-t="0"><span class="num">0:00</span>开场</button></li><li><button data-t="4.5"><span class="num">0:04</span>搬砖</button></li><li><button data-t="14.5"><span class="num">0:14</span>搬砖模拟</button></li><li><button data-t="24.0"><span class="num">0:24</span>期现与费率</button></li><li><button data-t="34.0"><span class="num">0:34</span>风险</button></li><li><button data-t="44.0"><span class="num">0:44</span>熬鹰</button></li><li><button data-t="54.0"><span class="num">0:54</span>规则</button></li></ol></div></div></div>
-<div class="panel" id="l31-practice"><p class="lead" style="margin-top:12px">所有K线都是比特币的真实成交数据（Bitstamp BTC/USD，2025-01-07 至 <span class="asof num">—</span>），时间均为 UTC。</p><nav class="toc"><a href="#l31k1">资金费率套利，空单那条腿会不会爆</a><a href="#l31k2">跨交易所搬砖</a><a href="#l31k3">小测验</a></nav><section id="l31k1">
+<div class="panel" id="l31-practice"><p class="lead" style="margin-top:12px">所有K线都是比特币的真实成交数据（Bitstamp BTC/USD，2025-01-07 至 <span class="asof num">—</span>），时间均为 UTC。</p><nav class="toc"><a href="#l31k0">实战：资金费率套利</a><a href="#l31k1">资金费率套利，空单那条腿会不会爆</a><a href="#l31k2">跨交易所搬砖</a><a href="#l31k3">小测验</a></nav><section id="l31k0">
+<h2>实战：资金费率套利</h2>
+<p class="lead">真实的比特币日 K 线，日期先隐藏。本金 10,000 美元，现货加等量空单，自己管理空单的保证金。资金费率为模拟数据。</p>
+<div id="l31sim"></div>
+</section>
+
+<section id="l31k1">
 <h2>练习 1：资金费率套利，空单那条腿会不会爆</h2>
 <p class="lead">经典的"现货 + 空永续"套利：用一部分钱买比特币现货，另一部分钱当保证金开同样数量的永续空单。价格涨跌两边抵消，赚的是空单每 8 小时收到的资金费率。下面用真实的比特币日线路径，看看<b>空单那条腿</b>会发生什么。资金费率按你设定的年化水平假设为恒定（模拟）。</p>
 <div class="row seg" role="radiogroup" aria-label="行情"><span>行情</span><input type="radio" name="l31w" id="l31w1" value="0" checked><label for="l31w1">2025 年 4–8 月上涨</label><input type="radio" name="l31w" id="l31w2" value="1"><label for="l31w2">2025-10 至 2026-02 下跌</label><input type="radio" name="l31w" id="l31w3" value="2"><label for="l31w3">2026 年 8–10 月反弹</label></div>
@@ -4219,7 +4273,13 @@ button.pri,.btn.pri{background:var(--acc);color:#fff;border-color:var(--acc)}
 </article>
 <p class="next"><a href="#l33-video">下一课：第33课 剥头皮与日内短线 →</a></p></div>
 <div class="panel" id="l32-video"><div class="vid"><video controls playsinline preload="none" poster="video/poster32.jpg" data-src="video/lesson32.mp4"></video><div><h3 style="margin-top:0">章节</h3><p class="note">无配音，看字幕即可。点章节可以跳转。</p><ol class="chap"><li><button data-t="0"><span class="num">0:00</span>开场</button></li><li><button data-t="4.5"><span class="num">0:04</span>概念</button></li><li><button data-t="14.5"><span class="num">0:14</span>收益形状</button></li><li><button data-t="24.5"><span class="num">0:24</span>回测</button></li><li><button data-t="35.0"><span class="num">0:35</span>Michael Liu</button></li><li><button data-t="45.5"><span class="num">0:45</span>第七章小结</button></li></ol></div></div></div>
-<div class="panel" id="l32-practice"><p class="lead" style="margin-top:12px">所有K线都是比特币的真实成交数据（Bitstamp BTC/USD，2025-01-07 至 <span class="asof num">—</span>），时间均为 UTC。</p><nav class="toc"><a href="#l32k1">画出期权策略的盈亏</a><a href="#l32k2">每月卖期权收租，长期结果如何</a><a href="#l32k3">小测验</a></nav><section id="l32k1">
+<div class="panel" id="l32-practice"><p class="lead" style="margin-top:12px">所有K线都是比特币的真实成交数据（Bitstamp BTC/USD，2025-01-07 至 <span class="asof num">—</span>），时间均为 UTC。</p><nav class="toc"><a href="#l32k0">实战：每周卖期权</a><a href="#l32k1">画出期权策略的盈亏</a><a href="#l32k2">每月卖期权收租，长期结果如何</a><a href="#l32k3">小测验</a></nav><section id="l32k0">
+<h2>实战：每周卖期权</h2>
+<p class="lead">真实的比特币日 K 线，日期先隐藏。一半比特币一半现金，每周决定卖看涨、卖看跌还是买保险，持续 26 周。期权价格为模拟数据。</p>
+<div id="l32sim"></div>
+</section>
+
+<section id="l32k1">
 <h2>练习 1：画出期权策略的盈亏</h2>
 <p class="lead">假设比特币现在价格是 100（方便看百分比）。选一个策略，调整行权价、到期天数和隐含波动率，看到期时在不同价格下的盈亏。期权价格用 Black-Scholes 公式估算（模拟）。</p>
 <div class="row seg" role="radiogroup" aria-label="策略"><span>策略</span><input type="radio" name="l32s" id="l32s1" value="0" checked><label for="l32s1">买看涨</label><input type="radio" name="l32s" id="l32s2" value="1"><label for="l32s2">买看跌</label><input type="radio" name="l32s" id="l32s3" value="2"><label for="l32s3">备兑看涨</label><input type="radio" name="l32s" id="l32s4" value="3"><label for="l32s4">保护性看跌</label><input type="radio" name="l32s" id="l32s5" value="4"><label for="l32s5">卖看跌接货</label><input type="radio" name="l32s" id="l32s6" value="5"><label for="l32s6">买跨式</label><input type="radio" name="l32s" id="l32s7" value="6"><label for="l32s7">卖跨式</label></div>
@@ -4712,7 +4772,7 @@ function Eng(bars,o){const e={bars,cur:o.start-1,end:o.end,fee:o.fee,maxLev:o.ma
       p0=fp;if(e.liq)break}if(e.liq)break}
     e.eq.push(e.equity(C));return true};
   return e}
-K.simEng=Eng;
+K.simEng=Eng;K.simStats=(eq,c0)=>{let pk=c0,dd=0;eq.forEach(x=>{pk=Math.max(pk,x);dd=Math.max(dd,1-x/pk)});return{f:eq[eq.length-1]/c0-1,dd}};
 
 function stats(eq,e,c0){const f=eq[eq.length-1]/c0-1;let pk=c0,dd=0;eq.forEach(x=>{pk=Math.max(pk,x);dd=Math.max(dd,1-x/pk)});const w=e?e.rt.filter(x=>x>0).length:0;return{f,dd,n:e?e.fills.length:0,rt:e?e.rt.length:0,win:e&&e.rt.length?w/e.rt.length:null,fees:e?e.fees:0}}
 
@@ -4747,7 +4807,7 @@ K.sim=function(root,cfg){
   const ui={get eng(){return E},get ind(){return IND},get bars(){return B},px:()=>E.px(),tip:m=>{h('tip').innerHTML=m},draw:()=>draw(),place:o=>{const x=E.place(o);draw();return x},cfg};
   function pick(){const D=K.data[cfg.tf],w=val('w');let s;
     if(w==='r'){s=cfg.warm+Math.floor(R()*(D.length-cfg.warm-cfg.len-1));win={name:'随机片段'}}
-    else{win=cfg.wins[+w];const t=Date.parse(win.a+'T00:00:00Z')/1000;s=D.findIndex(x=>x[0]>=t)}
+    else{win=cfg.wins[+w];const t=Date.parse(win.a+'T00:00:00Z')/1000;s=D.findIndex(x=>x[0]>=t);s=Math.min(Math.max(s,cfg.warm),D.length-cfg.len)}
     B=D.slice(s-cfg.warm,s+cfg.len);IND=cfg.ind?cfg.ind(B):{lines:[]}}
   function start(){stop();pick();E=Eng(B,{start:cfg.warm,end:B.length-1,fee:cfg.fee,maxLev:cfg.maxLev,short:cfg.short,cash:cfg.cash});ended=false;cross=null;h('rev').hidden=true;
     ui.st={};h('tools').hidden=!cfg.tools;if(cfg.tools){h('tools').innerHTML=cfg.tools.html;cfg.tools.init&&cfg.tools.init(ui)}
@@ -4832,6 +4892,9 @@ K.sim=function(root,cfg){
   ui.start=start;ui.redraw=()=>{draw();if(ended&&h('rev').querySelector('canvas'))0};
   return ui}
 })();
+KL.ti={sma(B,n){const r=Array(B.length).fill(null);let s=0;B.forEach((k,i)=>{s+=k[4];if(i>=n)s-=B[i-n][4];if(i>=n-1)r[i]=s/n});return r},
+ atr(B,n=20){const r=Array(B.length).fill(null);let a=null;for(let i=1;i<B.length;i++){const p=B[i-1][4],tr=Math.max(B[i][2]-B[i][3],Math.abs(B[i][2]-p),Math.abs(B[i][3]-p));a=a==null?tr:(a*(n-1)+tr)/n;if(i>=n)r[i]=a}return r},
+ hh(B,n){return B.map((k,i)=>i<n-1?null:Math.max(...B.slice(i-n+1,i+1).map(x=>x[2])))},ll(B,n){return B.map((k,i)=>i<n-1?null:Math.min(...B.slice(i-n+1,i+1).map(x=>x[3])))}};
 </script>
 <script>
 {
@@ -6478,6 +6541,22 @@ K.redraw.l23=()=>draw1();
 fetch('alts.json').then(r=>r.json()).then(x=>{A=x;$('#l23coin').innerHTML=CO.map(c=>`<button class="chip${c===coin?' on':''}" data-c="${c}">${c.toUpperCase()}</button>`).join('');
   $('#l23coin').addEventListener('click',e=>{const b=e.target.closest('.chip');if(!b)return;coin=b.dataset.c;document.querySelectorAll('#l23coin .chip').forEach(z=>z.classList.toggle('on',z===b));draw1()})});
 }
+{
+const K=KL,F=K.fmt,T=K.ti,el=document.getElementById('l23sim'),P='l23s';
+K.ready.push(()=>{const ui=K.sim(el,{id:P,tf:'daily',warm:60,len:200,fee:0.001,maxLev:1,cash:10000,short:false,view:90,
+  ind:B=>{const m=T.sma(B,50),m2=T.sma(B,20);return{m,lines:[{v:m,c:'#0ea5e9',w:2},{v:m2,c:'#f59e0b',w:1.2}]}},
+  wins:[{a:'2025-03-10'},{a:'2025-07-20'},{a:'2025-10-15'},{a:'2026-04-01'}],
+  intro:'<b>规则（第 23 课）：</b>收盘价在 50 日均线（蓝线）上方就持有，跌破就卖出。用日 K 线，每走一根就是一天。<br>每天收盘后，看信号，自己下单：该买就用市价全仓买入，该卖就全部平仓。橙线是 20 日均线，只作参考。',
+  tools:{html:`<h3>均线信号</h3><p data-g="s"></p>`,init(u){u.st={agree:0,tot:0,flips:0,last:null};sig(u)},
+   bar(u){const e=u.eng,i=e.cur,c=u.bars[i][4],m=u.ind.m[i],want=c>m;u.st.tot++;const has=e.q>0||e.orders.some(x=>x.side>0);if(has===want||(e.q>0&&e.orders.some(x=>x.ro)))u.st.agree++;if(u.st.last!=null&&u.st.last!==want)u.st.flips++;u.st.last=want;sig(u)}},
+  coach(ev,u){if(ev.kind!=='order')return'';const i=u.eng.cur,want=u.bars[i][4]>u.ind.m[i];if(ev.o.side>0&&!ev.reduce)return want?'✓ 收盘在 50 日均线上方，符合规则。':'✗ 收盘在 50 日均线下方，规则不允许买入。';return''},
+  botName:'均线规则',
+  bot(a){const e=a.e,i=e.cur,c=a.B[i][4],m=a.ind.m[i];if(c>m&&!e.q&&!e.orders.length)e.place({side:1,type:'market',qty:a.cap(0.995)});else if(c<m&&e.q>0)e.close(1,'跌破均线卖出')},
+  review(E,bot,u){const st=u.st;let fl=0;for(let i=61;i<u.bars.length;i++)if((u.bars[i][4]>u.ind.m[i])!==(u.bars[i-1][4]>u.ind.m[i-1]))fl++;st.flips=fl;return [`你亲手走过的 ${st.tot} 天里，你的仓位和规则一致的时间占 ${Math.round(st.agree/Math.max(1,st.tot)*100)}%。`,`信号一共翻转了 ${st.flips} 次。翻转很多次的时候，均线规则会在均线附近反复买卖、小亏好几次，这是趋势跟随最难熬的部分。`,
+    '规则机器人每天严格执行。它常常输在震荡里，赢在大趋势里。如果你在某次"明显要跌"或者"刚卖就涨"时没按规则做，看看那一次让你多赚了还是少赚了。'].join('<br>')}});
+  function sig(u){const i=u.eng.cur,c=u.bars[i][4],m=u.ind.m[i],e=u.eng;const w=c>m;el.querySelector('[data-g=s]').innerHTML=`收盘 ${F(c,0)}，50 日均线 ${F(m,0)}：<b class="${w?'up':'dn'}">${w?'在均线上方，规则要求持有':'在均线下方，规则要求空仓'}</b>。你现在${e.q>0?'持有':'空仓'}${(e.q>0)===w?'，和规则一致。':'，<b>和规则不一致</b>。'}`}
+  const o=K.redraw.l23;K.redraw.l23=()=>{o&&o();ui.redraw()};ui.start()});
+}
 </script><script>{
 const K=KL,$=s=>document.querySelector(s),v=n=>+$(`input[name=${n}]:checked`).value,pc=(x,d=0)=>`<span class="${x>=0?'up':'dn'}">${x>=9?Math.round(x+1)+' 倍':(x>=0?'+':'')+(x*100).toFixed(d)+'%'}</span>`;
 let L=null;const FEE=0.001;
@@ -6536,6 +6615,28 @@ K.redraw.l24=()=>{draw1();draw3()};
 draw2();draw3();
 (window.__btcLong||(window.__btcLong=fetch('btc_long.json').then(r=>r.json()))).then(x=>{L=x;draw1()});
 }
+{
+const K=KL,F=K.fmt,T=K.ti,el=document.getElementById('l24sim'),P='l24s';
+K.ready.push(()=>{const ui=K.sim(el,{id:P,tf:'daily',warm:60,len:200,fee:0.001,maxLev:3,cash:10000,short:false,view:90,
+  ind:B=>{const h=T.hh(B,20),l=T.ll(B,10),n=T.atr(B,20);return{h,l,n,lines:[{v:h,c:'#16a34a',w:1.4},{v:l,c:'#dc2626',w:1.4}]}},
+  wins:[{a:'2025-03-10'},{a:'2025-07-20'},{a:'2025-10-15'},{a:'2026-04-01'}],
+  intro:'<b>海龟规则（系统一，只做多）：</b>价格突破最近 20 天最高价（绿线）买入 1 个单位；1 个单位 = 价格波动 1N 时账户变动 1%（N 是 20 日平均真实波幅）。止损在入场价下方 2N。价格每往上走 0.5N 加 1 个单位，最多 4 个，每次加仓后止损上移到最新入场价下方 2N。跌破最近 10 天最低价（红线）全部离场。',
+  tools:{html:`<h3>海龟工具</h3><p class="num" data-g="v"></p><div class="row"><button class="btn pri" data-a="t-in">挂突破单（1 单位）</button><button class="btn" data-a="t-add">挂下一个加仓单</button><button class="btn" data-a="t-ex">止损上移到 10 日低点</button></div><p class="note">挂突破单：在今天的 20 日最高价挂一张突破买单，成交后自动设好 2N 止损。突破单挂着不成交的话，第二天 20 日最高价可能变了，需要撤掉重挂。</p>`,
+   init(u){u.st={units:0,last:null,adds:0,ok:0};vals(u)},bar(u){const e=u.eng;if(!e.q){if(u.st.units)e.orders=e.orders.filter(x=>x.why!=='加仓');u.st.units=0}vals(u)},
+   click(A,u){const e=u.eng,i=e.cur,I=u.ind,N=I.n[i],unit=e.equity()*0.01/N;
+     if(A==='t-in'){if(e.q)return u.tip('已经有持仓了，用"加仓单"。');e.cancelAll('t');const p=I.h[i]+1;e.place({side:1,type:'stop',p,qty:unit,keep:true,tag:'t',why:'突破入场',onFill:(o,fp)=>{u.st.units=1;u.st.last=fp;e.sl=fp-2*N}});u.tip(`突破买单挂在 ${F(p,0)}，1 单位 = ${unit.toFixed(4)} BTC（价值约 $${F(unit*p,0)}），成交后止损 ${F(p-2*N,0)}。`);u.draw()}
+     if(A==='t-add'){if(!e.q)return u.tip('先要有第一个单位。');if(u.st.units>=4)return u.tip('已经 4 个单位了，海龟规则不再加。');e.cancelAll('t');const p=u.st.last+0.5*N;e.place({side:1,type:'stop',p,qty:unit,keep:true,tag:'t',why:'加仓',onFill:(o,fp)=>{u.st.units++;u.st.last=fp;e.sl=fp-2*N}});u.tip(`加仓单挂在 ${F(p,0)}（上一次入场 ${F(u.st.last,0)} + 0.5N）。成交后所有单位的止损上移到 ${F(p-2*N,0)}。`);u.draw()}
+     if(A==='t-ex'){if(!e.q)return u.tip('现在没有持仓。');const l=I.l[i];if(l>=e.px())return u.tip('10 日低点已经在现价上方了，按规则应该直接离场。');if(e.sl&&l<e.sl)return u.tip(`10 日低点 ${F(l,0)} 比现在的止损 ${F(e.sl,0)} 还低，不用动。`);e.sl=l;u.tip(`止损上移到 10 日低点 ${F(l,0)}。`);u.draw()}}},
+  coach(ev,u){if(ev.kind==='order'&&!ev.reduce&&!ev.o.tag)return'提示：海龟规则用工具里的"突破单"入场，仓位按 N 计算。';if(ev.kind==='fill'){const f=ev.fills.find(x=>x.why==='止损');if(f)return'止损了。海龟法则的胜率只有三四成，大部分交易都是这样的小亏。'}return''},
+  botName:'海龟规则',
+  bot(a){const e=a.e,i=e.cur,I=a.ind,N=I.n[i],st=a.st;if(!e.q){st.u=0;e.cancelAll('t');e.place({side:1,type:'stop',p:I.h[i]+1,qty:e.equity()*0.01/N,keep:true,tag:'t',why:'突破入场',onFill:(o,fp)=>{st.u=1;st.last=fp;e.sl=fp-2*N}});return}
+    if(a.B[i][4]<I.l[i]){e.cancelAll('t');e.close(1,'跌破 10 日低点');return}e.sl=Math.max(e.sl||0,I.l[i]);
+    if(st.u<4&&!e.orders.some(x=>x.tag==='t')){e.place({side:1,type:'stop',p:st.last+0.5*N,qty:e.equity()*0.01/N,keep:true,tag:'t',why:'加仓',onFill:(o,fp)=>{st.u++;st.last=fp;e.sl=Math.max(e.sl||0,fp-2*N)}})}},
+  review(E,bot,u){const ins=E.fills.filter(f=>f.why==='突破入场').length,adds=E.fills.filter(f=>f.why==='加仓').length,st=E.fills.filter(f=>f.why==='止损').length;
+    return [`你突破入场 ${ins} 次，加仓 ${adds} 次，止损离场 ${st} 次。`,'海龟规则在震荡里会被反复止损，每次只亏 1%–2%；赚钱靠少数几次大趋势，而且必须加满仓、拿得住。','规则机器人每天重新挂突破单、最多加到 4 个单位、跌破 10 日低点离场。看看它的成交里，是不是很多小亏、少数大赚？'].join('<br>')}});
+  function vals(u){const i=u.eng.cur,I=u.ind,N=I.n[i];el.querySelector('[data-g=v]').innerHTML=`20 日最高 ${F(I.h[i],0)} · 10 日最低 ${F(I.l[i],0)} · N = ${F(N,0)} · 1 单位 = ${(u.eng.equity()*0.01/N).toFixed(4)} BTC${u.eng.q?` · 已有 ${u.st.units} 个单位`:''}`}
+  const o=K.redraw.l24;K.redraw.l24=()=>{o&&o();ui.redraw()};ui.start()});
+}
 </script><script>{
 const K=KL,$=s=>document.querySelector(s),v=n=>+$(`input[name=${n}]:checked`).value,pc=(x,d=1)=>`<span class="${x>=0?'up':'dn'}">${x>=0?'+':''}${(x*100).toFixed(d)}%</span>`;
 let L=null,c=null,t=null,S=0;
@@ -6581,6 +6682,29 @@ K.quiz($('#l25quiz'),[
 
 K.redraw.l25=()=>{if(cur!=null)show(ans)};
 (window.__btcLong||(window.__btcLong=fetch('btc_long.json').then(r=>r.json()))).then(x=>{L=x;c=x.c;t=x.t;S=t.findIndex(y=>y>=Date.UTC(2016,8,7)/1000);M20=ma(20);draw1();draw2();pick()});
+}
+{
+const K=KL,F=K.fmt,T=K.ti,el=document.getElementById('l25sim'),P='l25s';
+function state(B,I,i){const c=B[i][4],up=c>I.m100[i]&&I.m100[i]>I.m100[i-10];let lo=Infinity,k=i,pb=false;for(;k>i-15;k--){if(B[k][4]<I.m20[k]){pb=true}lo=Math.min(lo,B[k][3]);if(pb&&B[k-1][4]>=I.m20[k-1])break}
+  const back=pb&&c>I.m20[i]&&B[i-1][4]<=I.m20[i-1];return{up,pb,back,lo,c}}
+K.ready.push(()=>{const ui=K.sim(el,{id:P,tf:'daily',warm:110,len:180,fee:0.001,maxLev:3,cash:10000,short:false,view:90,
+  ind:B=>{const m20=T.sma(B,20),m50=T.sma(B,50),m100=T.sma(B,100);return{m20,m50,m100,lines:[{v:m100,c:'#64748b',w:2},{v:m50,c:'#0ea5e9',w:1.4},{v:m20,c:'#f59e0b',w:1.4}]}},
+  wins:[{a:'2025-05-01'},{a:'2025-06-15'},{a:'2025-09-01'},{a:'2026-05-01'}],
+  intro:'<b>规则（第 25 课）：</b><br>① 大方向：收盘在 100 日均线（灰线）上方，而且这条均线在上升，才考虑做多。<br>② 等回调：收盘跌到 20 日均线（橙线）下方。<br>③ 等回调结束：收盘重新站回 20 日均线，第二天开盘买入。<br>④ 止损放在这次回调的最低点下方；仓位按每笔亏 1% 计算。<br>⑤ 离场：收盘跌破 50 日均线（蓝线）或者打到止损。',
+  tools:{html:`<h3>回调信号</h3><p data-g="s"></p><div class="row"><button class="btn" data-a="p-fill">按规则填单</button><button class="btn" data-a="p-trail">止损上移到 50 日均线</button></div>`,
+   init(u){u.st={ent:[]};sig(u)},bar(u){sig(u);const e=u.eng,i=e.cur;if(e.q>0&&u.bars[i][4]<u.ind.m50[i]&&!e.orders.some(x=>x.ro)){u.st.warn=1;setTimeout(()=>u.tip('<b>收盘跌破 50 日均线了。</b>按规则应该离场：点"全部平仓"。'),0)}},
+   click(A,u){const e=u.eng,i=e.cur,s=state(u.bars,u.ind,i);
+     if(A==='p-fill'){const sl=Math.round(s.lo*0.995);el.querySelector(`#${P}d1`).checked=true;el.querySelector(`#${P}t1`).checked=true;el.querySelector(`#${P}sl`).value=sl;el.querySelector(`#${P}tp`).value='';el.querySelector(`#${P}m2`).checked=true;const z=el.querySelector(`#${P}z`);z.max=300;z.value=100;z.dispatchEvent(new Event('input',{bubbles:true}));el.querySelector('details.simbox').open=true;
+       u.tip(`已填好：市价买入，止损 ${F(sl,0)}（这次回调的最低点 ${F(s.lo,0)} 下方一点），每笔风险 1%。${s.up&&s.back?'现在正好是规则的买入信号。':'<b>注意：现在不是规则的买入信号</b>，确认要买再点"下单"。'}`)}
+     if(A==='p-trail'){if(!e.q)return u.tip('没有持仓。');const m=u.ind.m50[i];if(m>=e.px())return u.tip('50 日均线在现价上方，按规则应该离场。');if(e.sl&&m<=e.sl)return u.tip('50 日均线比现在的止损还低，不用动。');e.sl=m;u.tip(`止损上移到 50 日均线 ${F(m,0)}。均线会移动，可以过几天再更新。`);u.draw()}}},
+  coach(ev,u){if(ev.kind!=='order'||ev.reduce||ev.o.side<0)return'';const s=state(u.bars,u.ind,u.eng.cur),ok=s.up&&s.back;u.st.ent.push({ok,sl:!!ev.o.sl});
+    return [s.up?'✓ 大方向向上。':'✗ 大方向不满足（不在上升的 100 日均线上方）。',s.back?'✓ 回调后重新站回 20 日均线。':(s.pb?'✗ 还在回调里，没有确认回调结束。':'✗ 不是回调后的入场点。'),ev.o.sl?'✓ 有止损。':'✗ 没有止损。'].join(' ')},
+  botName:'回调规则',
+  bot(a){const e=a.e,i=e.cur,I=a.ind,c=a.B[i][4];if(e.q>0){if(c<I.m50[i])e.close(1,'跌破 50 日均线');return}if(e.orders.length)return;const s=state(a.B,I,i);if(s.up&&s.back){const sl=s.lo*0.995;e.place({side:1,type:'market',qty:e.equity()*0.01/Math.max(c-sl,c*0.005),sl})}},
+  review(E,bot,u){const en=u.st.ent,ok=en.filter(x=>x.ok).length;return [en.length?`你开了 ${en.length} 次仓，其中 ${ok} 次完全符合规则（大方向向上、回调后站回 20 日均线）。`:'你这次没有开仓。',
+    `规则机器人在这段行情里开了 ${bot?bot.fills.filter(f=>f.side>0).length:0} 次仓。回调入场的优势是止损近、同样 1% 的风险能用更大的仓位；代价是有时回调变成了反转。`].join('<br>')}});
+  function sig(u){const i=u.eng.cur,s=state(u.bars,u.ind,i);el.querySelector('[data-g=s]').innerHTML=`大方向：${s.up?'<b class="up">向上</b>':'<b class="dn">不是上升趋势</b>'} · ${s.pb?`回调中，回调最低点 ${F(s.lo,0)}`:'没有回调'}${s.up&&s.back?' · <b class="up">回调后站回 20 日均线：买入信号</b>':''}`}
+  const o=K.redraw.l25;K.redraw.l25=()=>{o&&o();ui.redraw()};ui.start()});
 }
 </script><script>{
 const K=KL,$=s=>document.querySelector(s),v=n=>+$(`input[name=${n}]:checked`).value,usd=x=>'$'+Math.round(x).toLocaleString(),pc=(x,d=0)=>`<span class="${x>=0?'up':'dn'}">${x>=0?'+':''}${(x*100).toFixed(d)}%</span>`;
@@ -6632,6 +6756,37 @@ K.quiz($('#l26quiz'),[
 K.redraw.l26=()=>{draw1();draw2()};draw2();
 K.ready.push(d=>{D=d;draw1()});
 }
+{
+const K=KL,F=K.fmt,T=K.ti,el=document.getElementById('l26sim'),P='l26s';
+const par=()=>({lev:+el.querySelector(`#${P}lv`).value,step:+el.querySelector(`#${P}st`).value/100,mode:el.querySelector(`input[name=${P}md]:checked`).value});
+K.ready.push(()=>{const ui=K.sim(el,{id:P,tf:'daily',warm:60,len:200,fee:0.0005,maxLev:5,cash:10000,short:false,view:90,
+  ind:B=>({lines:[{v:T.sma(B,50),c:'#0ea5e9',w:1.4}]}),
+  wins:[{a:'2025-04-08'},{a:'2025-03-10'},{a:'2025-07-20'},{a:'2026-04-01'}],
+  intro:'<b>任务：</b>选一种做法，开首仓，然后价格每涨一段就按规则加仓。合约最高 5 倍杠杆，图上紫线是强平价。<br><b>金字塔：</b>每次加的量是上一次的一半。<b>滚仓：</b>每次把总仓位加到"当前权益 × 杠杆"。<br>加仓后止损放哪里、什么时候走，由你决定。',
+  tools:{html:`<h3>加仓规则</h3><div class="row seg" role="radiogroup" aria-label="做法"><span>做法</span><input type="radio" name="${P}md" id="${P}md1" value="pyr" checked><label for="${P}md1">金字塔</label><input type="radio" name="${P}md" id="${P}md2" value="roll"><label for="${P}md2">滚仓</label></div>
+<div class="simf"><label for="${P}lv">首仓杠杆（滚仓的目标杠杆）</label><input id="${P}lv" inputmode="decimal" value="2"><label for="${P}st">每涨多少加一次（%）</label><input id="${P}st" inputmode="decimal" value="5"></div><p data-g="i"></p>
+<div class="row"><button class="btn pri" data-a="y-open">开首仓</button><button class="btn" data-a="y-add">挂下一次加仓</button><button class="btn" data-a="y-be">止损移到均价</button></div>`,
+   init(u){u.st={n:0,last:null,q:0,maxlev:0};info(u)},bar(u){const e=u.eng;u.st.maxlev=Math.max(u.st.maxlev,e.q?e.lev():0);if(!e.q&&u.st.n){e.cancelAll('y');u.st.n=0}info(u)},
+   click(A,u){const e=u.eng,p=par();
+     if(A==='y-open'){if(e.q)return u.tip('已经有仓位了。');const q=e.equity()*p.lev/e.px();e.place({side:1,type:'market',qty:q,tag:'y',why:'首仓',onFill:(o,fp)=>{u.st.n=1;u.st.last=fp;u.st.q=q}});u.tip(`首仓 ${p.lev} 倍，下一根开盘成交。`);u.draw()}
+     if(A==='y-add'){if(!e.q||!u.st.last)return u.tip('先开首仓，等它成交。');e.cancelAll('y');const px=u.st.last*(1+p.step);
+       e.place({side:1,type:'stop',p:px,qty:0,keep:true,tag:'y',why:p.mode==='pyr'?'金字塔加仓':'滚仓加仓',dyn:1,onFill:(o,fp)=>{u.st.n++;u.st.last=fp}});
+       u.tip(`加仓单挂在 ${F(px,0)}（上一次买入价 +${(p.step*100).toFixed(0)}%）。${p.mode==='pyr'?`这次加 ${(u.st.q/2).toFixed(4)} BTC。`:'成交时会把总仓位加到当时权益的 '+p.lev+' 倍。'}`);u.draw()}
+     if(A==='y-be'){if(!e.q)return u.tip('没有持仓。');if(e.A>=e.px())return u.tip('均价在现价上方，现在设不了保本止损。');e.sl=e.A;u.tip(`止损移到均价 ${F(e.A,0)}：这一笔最差也是打平（不算手续费）。`);u.draw()}}},
+  coach(ev,u){if(ev.kind!=='fill')return'';const e=u.eng;if(!e.q||!ev.fills.some(f=>f.tag==='y'))return'';const lq=e.liqPx();return `现在杠杆 ${e.lev().toFixed(1)} 倍${lq?`，强平价 ${F(lq,0)}，离现价 ${((1-lq/e.px())*100).toFixed(1)}%`:''}。`},
+  botName:'金字塔规则',
+  bot(a){const e=a.e,st=a.st,i=e.cur,c=a.B[i][4];if(!st.p)st.p=par();const p=st.p;
+    if(!e.q&&!e.orders.length&&!st.done){st.done=1;st.q=e.equity()*p.lev/c;e.place({side:1,type:'market',qty:st.q,why:'首仓',onFill:(o,fp)=>{st.last=fp;st.hi=fp;st.k=1;st.add=st.q}});return}
+    if(!e.q)return;st.hi=Math.max(st.hi,c);e.sl=Math.max(e.sl||0,st.hi*0.85);
+    if(st.k<5&&!e.orders.length){st.add/=2;const add=st.add;e.place({side:1,type:'stop',p:st.last*(1+p.step),qty:add,keep:true,why:'金字塔加仓',onFill:(o,fp)=>{st.last=fp;st.k++}})}},
+  review(E,bot,u){const st=u.st,p=par(),adds=E.fills.filter(f=>/加仓/.test(f.why)).length;return [E.liq?'<b>你爆仓了。</b>每一次加仓都把强平价拉近一次。':`你加仓 ${adds} 次，最高实际杠杆 ${st.maxlev.toFixed(1)} 倍。`,
+    '规则机器人用你设的首仓杠杆和加仓间隔做金字塔：每次加上一次的一半，最多加 4 次，止损跟在最高收盘价下方 15%。','如果你选了滚仓，看看它和金字塔的收益曲线：趋势里滚仓涨得更快，但一次回调就可能吐回全部利润。'].join('<br>')}});
+  function info(u){const p=par(),e=u.eng,x=el.querySelector('[data-g=i]');x.textContent=e.q&&u.st.last?`下一次加仓价 ${F(u.st.last*(1+p.step),0)}；已加仓 ${Math.max(0,u.st.n-1)} 次。`:'滚仓时，涨 5% 加到 5 倍，账户涨约 25%；反过来回调 20% 就会归零。'}
+  // 动态数量：加仓单成交前按规则算数量
+  const o=K.redraw.l26;K.redraw.l26=()=>{o&&o();ui.redraw()};ui.start();
+  const wrap=()=>{const e=ui.eng;if(!e||e._w)return;e._w=1;const s0=e.step;e.step=()=>{const p=par();e.orders.forEach(x=>{if(x.dyn){if(p.mode==='pyr')x.qty=ui.st.q/Math.pow(2,ui.st.n);else{const px=x.p,eq=e.equity(px);x.qty=Math.max(0,eq*p.lev/px-e.q)}}});return s0()}};
+  wrap();el.addEventListener('click',wrap);el.addEventListener('change',wrap)});
+}
 </script><script>{
 const K=KL,$=s=>document.querySelector(s),v=n=>+$(`input[name=${n}]:checked`).value,pc=(x,d=0)=>`<span class="${x>=0?'up':'dn'}">${x>=0?'+':''}${(x*100).toFixed(d)}%</span>`;
 const CO=['btc','eth','doge','xrp','bnb','ada','link','uni','aave','ltc'],FEE=0.001,S=120;let A=null;
@@ -6665,6 +6820,50 @@ K.quiz($('#l27quiz'),[
 
 K.redraw.l27=()=>{draw1();draw2()};
 fetch('alts.json').then(r=>r.json()).then(x=>{A=x;draw1();table();draw2()});
+}
+{
+const K=KL,F=K.fmt,el=document.getElementById('l27sim'),P='l27s',FEE=0.001,WEEKS=26,LB=28;
+const pc=(x,d=1)=>`<span class="${x>=0?'up':'dn'}">${x>=0?'+':''}${(x*100).toFixed(d)}%</span>`;
+let A=null,C=[],S=null;
+el.innerHTML=`<div class="row seg" role="radiogroup" aria-label="行情片段"><span>行情</span><input type="radio" name="${P}w" id="${P}w0" value="0" checked><label for="${P}w0">片段 1</label><input type="radio" name="${P}w" id="${P}w1" value="1"><label for="${P}w1">片段 2</label><input type="radio" name="${P}w" id="${P}w2" value="2"><label for="${P}w2">片段 3</label><input type="radio" name="${P}w" id="${P}wr" value="r"><label for="${P}wr">随机</label></div>
+<div class="row"><button class="btn" data-a="new">开始 / 重来</button></div>
+<div class="simhud"><div><span>进度</span><b class="num" data-h="prog">—</b></div><div><span>持有</span><b data-h="hold">—</b></div><div><span>权益</span><b class="num" data-h="eq">—</b></div><div><span>收益</span><b class="num" data-h="ret">—</b></div></div>
+<div class="fig sm"><canvas aria-label="你的账户、规则轮动和 10 币平均的净值"></canvas></div><p class="note">黑线是你，蓝线是规则轮动，灰线是 10 个币平均持有。</p>
+<div class="info" data-h="tip"></div>
+<div class="scroll"><table class="tbl" style="min-width:0;font-size:13px" data-h="tab"></table></div>
+<div class="simctl"><button class="btn pri" data-a="next">按勾选持有一周 ▶</button><button class="btn" data-a="top3">勾选前 3 名</button><button class="btn" data-a="none">全部清空（拿现金）</button><button class="btn" data-a="end">结束复盘</button></div>
+<div data-h="rev" hidden></div>`;
+const h=n=>el.querySelector(`[data-h="${n}"]`);
+function ret(c,d,n){return A[c][d]/A[c][d-n]-1}
+function start(){const w=el.querySelector(`input[name=${P}w]:checked`).value,R=K.rng(Date.now()%1e6);const pre=[90,260,420];const s=w==='r'?LB+Math.floor(R()*(A.n-LB-WEEKS*7-1)):pre[+w];
+  S={s,d:s,w:{},V:1,bw:{},BV:1,eq:[1],beq:[1],avg:[1],log:[],ended:false,picks:0,top:0};h('rev').hidden=true;tip('<b>规则（第 27 课）：</b>每周看一次排名（按过去 28 天涨幅），选你要持有的币，等权重。可以全部不选，拿现金。手续费 0.1%。<br>规则轮动：每周买前 3 名里过去 28 天上涨的币，下跌的不买、拿现金。');draw()}
+function tip(m){h('tip').innerHTML=m}
+function rank(d){return C.map(c=>({c,r7:ret(c,d,7),r28:ret(c,d,LB)})).sort((a,b)=>b.r28-a.r28)}
+function rebal(w,V,nw){let t=0;const keys=new Set([...Object.keys(w),...Object.keys(nw)]);keys.forEach(k=>t+=Math.abs((nw[k]||0)-(w[k]||0)));return V*(1-t*FEE)}
+function weekStep(){const d=S.d,rk=rank(d),sel=[...el.querySelectorAll(`input[name=${P}c]:checked`)].map(x=>x.value),nw={};sel.forEach(c=>nw[c]=1/sel.length);
+  const top=rk.slice(0,3).filter(x=>x.r28>0).map(x=>x.c),bn={};top.forEach(c=>bn[c]=1/top.length);
+  S.V=rebal(S.w,S.V,nw);S.BV=rebal(S.bw,S.BV,bn);S.w=nw;S.bw=bn;S.picks+=sel.length?1:0;S.top+=sel.length&&sel.every(c=>top.includes(c))&&top.every(c=>sel.includes(c))?1:0;
+  for(let k=1;k<=7;k++){const g=w=>{let s=0,cash=1;for(const c in w){s+=w[c]*A[c][d+k]/A[c][d+k-1];cash-=w[c]}return s+cash};
+    // 权重随价格漂移
+    const drift=(w,V)=>{const f=g(w),nv={};for(const c in w)nv[c]=w[c]*A[c][d+k]/A[c][d+k-1]/f;return[nv,V*f]};[S.w,S.V]=drift(S.w,S.V);[S.bw,S.BV]=drift(S.bw,S.BV);
+    S.eq.push(S.V);S.beq.push(S.BV);let a=0;C.forEach(c=>a+=A[c][d+k]/A[c][S.s]);S.avg.push(a/C.length)}
+  const rk2=C.map(c=>({c,r:A[c][d+7]/A[c][d]-1})).sort((a,b)=>b.r-a.r);S.d+=7;
+  tip(`这一周你持有：${sel.length?sel.map(c=>c.toUpperCase()).join('、'):'现金'}。这周涨得最多的是 ${rk2[0].c.toUpperCase()}（${pc(rk2[0].r)}），跌得最多的是 ${rk2[rk2.length-1].c.toUpperCase()}（${pc(rk2[rk2.length-1].r)}）。`);
+  if(S.d>=S.s+WEEKS*7)finish();else draw()}
+function draw(){if(!S)return;const k=(S.d-S.s)/7;h('prog').textContent=`第 ${k+1} / ${WEEKS} 周`;h('eq').textContent='$'+F(S.V*10000,0);h('ret').innerHTML=pc(S.V-1);h('hold').textContent=Object.keys(S.w).map(c=>c.toUpperCase()).join(' ')||'现金';
+  const rk=rank(S.d),cur=new Set(Object.keys(S.w));
+  h('tab').innerHTML='<tr><th>排名</th><th>币</th><th>过去 7 天</th><th>过去 28 天</th><th>持有</th></tr>'+rk.map((x,i)=>`<tr><td>${i+1}</td><td>${x.c.toUpperCase()}</td><td>${pc(x.r7)}</td><td>${pc(x.r28)}</td><td><input type="checkbox" name="${P}c" value="${x.c}" aria-label="持有 ${x.c.toUpperCase()}"${cur.has(x.c)?' checked':''} style="width:22px;height:22px"></td></tr>`).join('');
+  K.lines(el.querySelector('canvas'),[{v:S.avg,c:K.css('--mute'),w:1.4},{v:S.beq,c:K.css('--acc'),w:1.8},{v:S.eq,c:K.css('--ink'),w:2.4}],{base:1,fmt:x=>x.toFixed(2)+'x'})}
+function finish(){if(S.ended)return;S.ended=true;while(S.d<S.s+WEEKS*7){weekStepSilent()}const st=x=>K.simStats(x,1),me=st(S.eq),b=st(S.beq),av=st(S.avg),t0=K.ts(A.t0+S.s*86400).slice(0,10),t1=K.ts(A.t0+S.d*86400).slice(0,10);
+  const row=(n,s)=>`<tr><td>${n}</td><td>${pc(s.f)}</td><td>${s.dd<0.005?'0%':'-'+(s.dd*100).toFixed(0)+'%'}</td></tr>`;h('rev').hidden=false;
+  h('rev').innerHTML=`<h3>复盘</h3><p>这段时间是 <b>${t0} 到 ${t1}</b>，10 个币平均 ${pc(av.f)}。</p><div class="scroll"><table class="tbl" style="min-width:0;font-size:13px"><tr><th></th><th>收益</th><th>最大回撤</th></tr>${row('你',me)}${row('规则轮动',b)}${row('10 币平均持有',av)}</table></div>
+<div class="info">你在 ${S.picks} 周里持有了币，其中 ${S.top} 周的选择和规则完全一样。<br>第 27 课的回测里，不加过滤的轮动常常跑输平均；加上"只买上涨的、否则拿现金"之后明显改善，改善主要来自下跌时拿着现金。也要记住"动量崩溃"：大跌后的反弹里，过去的输家常常涨得最猛。</div>`;draw();h('rev').scrollIntoView({behavior:K.reduced?'auto':'smooth',block:'start'})}
+function weekStepSilent(){const keep=[...el.querySelectorAll(`input[name=${P}c]`)];weekStep();S.ended=true}
+el.addEventListener('click',e=>{const a=e.target.closest('[data-a]');if(!a)return;const A_=a.dataset.a;if(A_==='new')return start();if(!S||S.ended)return;
+  if(A_==='next')weekStep();else if(A_==='end'){S.ended=false;finish()}else if(A_==='top3'||A_==='none'){const top=rank(S.d).slice(0,3).map(x=>x.c);el.querySelectorAll(`input[name=${P}c]`).forEach(x=>x.checked=A_==='top3'&&top.includes(x.value));tip(A_==='top3'?'已勾选前 3 名。规则机器人只买其中过去 28 天上涨的。':'已全部清空：这一周拿现金。')}});
+el.addEventListener('change',e=>{if(e.target.name===`${P}w`)start()});
+const o=K.redraw.l27;K.redraw.l27=()=>{o&&o();draw()};
+(window.__alts||(window.__alts=fetch('alts.json').then(r=>r.json()))).then(x=>{A=x;C=Object.keys(A).filter(k=>Array.isArray(A[k]));start()});
 }
 </script><script>{
 const K=KL,$=s=>document.querySelector(s),pc=(x,d=0)=>`<span class="${x>=0?'up':'dn'}">${x>=0?'+':''}${(x*100).toFixed(d)}%</span>`,usd=x=>(x<0?'-$':'$')+Math.abs(Math.round(x)).toLocaleString();
@@ -6702,6 +6901,26 @@ K.quiz($('#l28quiz'),[
 
 K.redraw.l28=()=>{draw1();draw2()};
 (window.__btcLong||(window.__btcLong=fetch('btc_long.json').then(r=>r.json()))).then(x=>{L=x;months();draw1();draw2()});
+}
+{
+const K=KL,F=K.fmt,el=document.getElementById('l28sim'),P='l28s',WK=7,AMT=10000/29;
+K.ready.push(()=>{const ui=K.sim(el,{id:P,tf:'daily',warm:30,len:203,fee:0.001,maxLev:1,cash:10000,short:false,view:90,
+  wins:[{a:'2025-02-10'},{a:'2025-06-01'},{a:'2025-10-01'},{a:'2026-03-01'}],
+  intro:`<b>任务：</b>你手上有 10,000 美元，要在大约 29 周（203 天）里买比特币。三种做法任选，也可以混着用：<br>① <b>一次性</b>：今天全部买入（"手动下单"里市价 100%）。<br>② <b>定投</b>：每 7 天点一次"定投一份"，每份 $${F(AMT,0)}。<br>③ <b>价值平均</b>：每 7 天点一次"补到目标"：目标市值每周增加 $${F(AMT,0)}，跌了多买，涨多了卖。<br>"一直拿着"那一行就是一次性买入的结果。`,
+  tools:{html:`<h3>定投工具</h3><p data-g="w"></p><div class="row"><button class="btn pri" data-a="d-dca">定投一份</button><button class="btn" data-a="d-va">按价值平均补到目标</button><button class="btn" data-a="d-w7">走到下周</button></div>`,
+   init(u){u.st={done:{},n:0,va:0};wk(u)},bar(u){wk(u)},
+   click(A,u){const e=u.eng,k=Math.floor((e.cur-30+1)/WK),p=e.px();
+     if(A==='d-w7'){let n=0;while(n<WK&&e.cur<e.end){el.querySelector('[data-a=s1]').click();n++;if(Math.floor((e.cur-30+1)/WK)!==k)break}return}
+     if(u.st.done[k])return u.tip('这一周已经操作过了，点"走到下周"。');
+     if(A==='d-dca'){const cash=e.equity()-e.q*p;if(cash<5)return u.tip('现金已经用完了。');e.place({side:1,type:'market',qty:Math.min(AMT,cash)*0.999/p,why:'定投'});u.st.done[k]=1;u.st.n++;u.tip(`第 ${k+1} 周：定投 $${F(Math.min(AMT,cash),0)}，下一根开盘成交。`);u.draw()}
+     if(A==='d-va'){const tgt=AMT*(k+1),val=e.q*p,cash=e.equity()-val,d=tgt-val;if(d>0){const a=Math.min(d,cash);if(a<5)return u.tip('现金已经用完了，买不了。');e.place({side:1,type:'market',qty:a*0.999/p,why:'价值平均买入'});u.tip(`第 ${k+1} 周：目标市值 $${F(tgt,0)}，现在 $${F(val,0)}，买入 $${F(a,0)}${a<d?'（现金不够，只能买这么多）':''}。`)}
+       else{e.place({side:-1,type:'market',qty:Math.min(e.q,-d/p),ro:true,why:'价值平均卖出'});u.tip(`第 ${k+1} 周：市值 $${F(val,0)} 超过目标 $${F(tgt,0)}，卖出 $${F(-d,0)}。`)}u.st.done[k]=1;u.st.va++;u.draw()}}},
+  botName:'每周定投',
+  bot(a){const e=a.e,i=e.cur-30+1;if(i>=0&&i%WK===0){const cash=e.equity()-e.q*e.px();if(cash>5)e.place({side:1,type:'market',qty:Math.min(AMT,cash)*0.999/e.px(),why:'定投'})}},
+  review(E,bot,u){const cash=E.equity(u.bars[u.bars.length-1][4])-E.q*u.bars[u.bars.length-1][4];return [`你定投了 ${u.st.n} 次，用价值平均操作了 ${u.st.va} 次。结束时还有 $${F(cash,0)} 现金没投出去。`,
+    '"一直拿着"就是第一天一次性买入。第 28 课的结论：在长期上涨的资产上，一次性买入大约三分之二的时候赢；定投的价值是避免买在最高点后的后悔。换几个片段，看看哪种做法赢得多。'].join('<br>')}});
+  function wk(u){const e=u.eng,k=Math.floor((e.cur-30+1)/WK),p=e.px(),val=e.q*p,cash=e.equity()-val;el.querySelector('[data-g=w]').innerHTML=`第 ${Math.max(1,k+1)} 周 · 币的市值 $${F(val,0)} · 现金 $${F(cash,0)} · 价值平均目标 $${F(AMT*(Math.max(0,k)+1),0)}${u.st.done[k]?' · 本周已操作':' · <b>本周还没操作</b>'}`}
+  const o=K.redraw.l28;K.redraw.l28=()=>{o&&o();ui.redraw()};ui.start()});
 }
 </script><script>{
 const K=KL,$=s=>document.querySelector(s),v=n=>+$(`input[name=${n}]:checked`).value,pc=(x,d=0)=>`<span class="${x>=0?'up':'dn'}">${x>=9?Math.round(x+1)+' 倍':(x>=0?'+':'')+(x*100).toFixed(d)+'%'}</span>`;
@@ -6747,6 +6966,22 @@ K.redraw.l29=()=>{draw1();draw2()};draw2();
 (window.__btcLong||(window.__btcLong=fetch('btc_long.json').then(r=>r.json()))).then(x=>{L=x;draw1()});
 fetch('alts.json').then(r=>r.json()).then(x=>{A=x;draw1()});
 }
+{
+const K=KL,F=K.fmt,el=document.getElementById('l29sim'),P='l29s';
+K.ready.push(()=>{const ui=K.sim(el,{id:P,tf:'daily',warm:30,len:240,fee:0.001,maxLev:1,cash:10000,short:false,view:90,
+  wins:[{a:'2025-02-10'},{a:'2025-04-08'},{a:'2025-09-01'},{a:'2026-01-15'}],
+  intro:'<b>任务：</b>你的组合是比特币 50% + 稳定币 50%。先点"再平衡到 50%"建仓，然后一天天往前走。比例偏离多少才调、什么时候调，由你决定。第 29 课推荐的做法是偏离超过 10 个百分点（低于 40% 或高于 60%）再调。',
+  tools:{html:`<h3>再平衡工具</h3><p data-g="w"></p><div class="row"><button class="btn pri" data-a="r-go">再平衡到 50%</button><button class="btn" data-a="r-run">一直走到需要调仓</button></div>`,
+   init(u){u.st={n:0};w(u)},bar(u){w(u)},
+   click(A,u){const e=u.eng,p=e.px(),eq=e.equity(),val=e.q*p;
+     if(A==='r-go'){const d=eq/2-val;if(Math.abs(d)<eq*0.005)return u.tip('已经接近 50% 了，不用调。');d>0?e.place({side:1,type:'market',qty:d/p,why:'再平衡买入'}):e.place({side:-1,type:'market',qty:-d/p,ro:true,why:'再平衡卖出'});u.st.n++;u.tip(`${d>0?'买入':'卖出'} $${F(Math.abs(d),0)} 的比特币，下一根开盘成交。`);u.draw()}
+     if(A==='r-run'){if(!e.q)return u.tip('先建仓。');let n=0;while(e.cur<e.end&&n<240){el.querySelector('[data-a=s1]').click();n++;const wt=e.q*e.px()/e.equity();if(wt<0.4||wt>0.6)break}}}},
+  botName:'阈值再平衡',
+  bot(a){const e=a.e,p=e.px(),eq=e.equity(),wt=e.q*p/eq;if(e.cur===a.warm-1||wt<0.4||wt>0.6){const d=eq/2-e.q*p;d>0?e.place({side:1,type:'market',qty:d/p,why:'再平衡'}):e.place({side:-1,type:'market',qty:-d/p,ro:true,why:'再平衡'})}},
+  review(E,bot,u){return [`你调仓 ${u.st.n} 次（含第一次建仓），规则机器人调了 ${bot?bot.fills.length:0} 次。`,'注意"一直拿着"是 100% 比特币，风险是 50/50 组合的两倍左右。比较时更该看回撤：再平衡的首要作用是把风险控制在你一开始选的水平。'].join('<br>')}});
+  function w(u){const e=u.eng,p=e.px(),eq=e.equity(),wt=e.q*p/eq;el.querySelector('[data-g=w]').innerHTML=`比特币占 <b class="${wt<0.4||wt>0.6?'dn':''}">${(wt*100).toFixed(1)}%</b> · 稳定币占 ${((1-wt)*100).toFixed(1)}%${e.q&&(wt<0.4||wt>0.6)?' · <b>偏离超过 10 个百分点了</b>':''}`}
+  const o=K.redraw.l29;K.redraw.l29=()=>{o&&o();ui.redraw()};ui.start()});
+}
 </script><script>{
 const K=KL,$=s=>document.querySelector(s),pc=(x,d=0)=>`<span class="${x>=0?'up':'dn'}">${x>=0?'+':''}${(x*100).toFixed(d)}%</span>`;
 const CO=['btc','eth','doge','xrp','bnb','ada','link','uni','aave','ltc'];let A=null;const FEE=0.001;
@@ -6791,6 +7026,53 @@ K.quiz($('#l30quiz'),[
 
 K.redraw.l30=()=>draw1();
 fetch('alts.json').then(r=>r.json()).then(x=>{A=x;const opt=CO.map(c=>`<option value="${c}">${c.toUpperCase()}</option>`).join('');$('#l30a').innerHTML=opt;$('#l30b').innerHTML=opt;$('#l30a').value='eth';$('#l30b').value='btc';draw1()});
+}
+{
+const K=KL,F=K.fmt,el=document.getElementById('l30sim'),P='l30s',LEN=180,ZN=30,FEE=0.0005;
+const pc=(x,d=1)=>`<span class="${x>=0?'up':'dn'}">${x>=0?'+':''}${(x*100).toFixed(d)}%</span>`;
+const PAIRS=[['eth','btc'],['ltc','btc'],['link','uni'],['ada','xrp']];
+let A=null,S=null;
+el.innerHTML=`<div class="row seg" role="radiogroup" aria-label="币对"><span>币对</span>${PAIRS.map((p,i)=>`<input type="radio" name="${P}p" id="${P}p${i}" value="${i}"${i?'':' checked'}><label for="${P}p${i}">${p[0].toUpperCase()}/${p[1].toUpperCase()}</label>`).join('')}</div>
+<div class="row"><button class="btn" data-a="new">随机抽一段 / 重来</button></div>
+<div class="simhud"><div><span>进度</span><b class="num" data-h="prog">—</b></div><div><span>z 值</span><b class="num" data-h="z">—</b></div><div><span>权益</span><b class="num" data-h="eq">—</b></div><div><span>收益</span><b class="num" data-h="ret">—</b></div></div>
+<div class="fig sm"><canvas aria-label="价差的 z 值"></canvas></div><p class="note" data-h="cap"></p>
+<div class="fig sm"><canvas aria-label="两个币的价格（起点为 1）"></canvas></div>
+<div class="info" data-h="tip"></div><div class="simpos" data-h="pos"></div>
+<div class="row"><label for="${P}n">每条腿的仓位</label><input type="range" id="${P}n" min="10" max="100" step="5" value="50"><strong class="num" data-h="nv">50%</strong></div>
+<div class="simctl"><button class="btn" data-a="ls">做多价差</button><button class="btn" data-a="ss">做空价差</button><button class="btn" data-a="cl">平仓</button><button class="btn pri" data-a="s1">下一天 ▶</button><button class="btn" data-a="s5">走 5 天</button><button class="btn" data-a="end">结束复盘</button></div>
+<div data-h="rev" hidden></div>`;
+const h=n=>el.querySelector(`[data-h="${n}"]`);
+function zs(a,b){const n=A.n,lr=[];for(let i=0;i<n;i++)lr.push(Math.log(A[a][i]/A[b][i]));const z=Array(n).fill(null);for(let i=ZN;i<n;i++){let s=0,s2=0;for(let j=i-ZN+1;j<=i;j++){s+=lr[j];s2+=lr[j]*lr[j]}const m=s/ZN,sd=Math.sqrt(Math.max(1e-12,s2/ZN-m*m));z[i]=(lr[i]-m)/sd}return z}
+function acct(){return{cash:10000,qa:0,qb:0,fees:0,eq:[10000],n:0,stops:0}}
+function val(ac,d){return ac.cash+ac.qa*A[S.a][d]+ac.qb*A[S.b][d]}
+function trade(ac,d,dir,frac){const pa=A[S.a][d],pb=A[S.b][d];close(ac,d);if(!dir)return;const eq=val(ac,d),N=eq*frac;ac.qa=dir*N/pa;ac.qb=-dir*N/pb;ac.cash-=ac.qa*pa+ac.qb*pb;const f=2*N*FEE;ac.cash-=f;ac.fees+=f;ac.n++}
+function close(ac,d){if(!ac.qa)return;const pa=A[S.a][d],pb=A[S.b][d],f=(Math.abs(ac.qa*pa)+Math.abs(ac.qb*pb))*FEE;ac.cash+=ac.qa*pa+ac.qb*pb-f;ac.fees+=f;ac.qa=ac.qb=0}
+function start(){const pi=+el.querySelector(`input[name=${P}p]:checked`).value,R=K.rng(Date.now()%1e6);const[a,b]=PAIRS[pi];const z=zs(a,b),s=ZN+30+Math.floor(R()*(A.n-ZN-30-LEN-1));
+  S={a,b,z,s,d:s,me:acct(),bot:acct(),bpos:0,ended:false,ent:[]};h('rev').hidden=true;
+  tip(`<b>规则（第 30 课）：</b>价差 = ln(${a.toUpperCase()}/${b.toUpperCase()})。z 值 = 价差偏离最近 30 天平均的标准差倍数。<br>z 大于 2：<b>做空价差</b>（空 ${a.toUpperCase()}、多 ${b.toUpperCase()}）。z 小于 −2：<b>做多价差</b>（多 ${a.toUpperCase()}、空 ${b.toUpperCase()}）。z 回到 0 附近平仓；z 扩大到 4 以上止损。两条腿金额相等，手续费每条腿 0.05%。`);draw()}
+function tip(m){h('tip').innerHTML=m}
+function botAct(d){const z=S.z[d],ac=S.bot;if(!S.bpos){if(z>2){trade(ac,d,-1,0.5);S.bpos=-1}else if(z<-2){trade(ac,d,1,0.5);S.bpos=1}}else if(Math.abs(z)<0.5||Math.abs(z)>4||Math.sign(z)===S.bpos&&false){if(Math.abs(z)>4)ac.stops++;close(ac,d);S.bpos=0}}
+function step(n){for(let k=0;k<n&&!S.ended;k++){botAct(S.d);S.d++;S.me.eq.push(val(S.me,S.d));S.bot.eq.push(val(S.bot,S.d));const z=S.z[S.d];
+  if(S.me.qa){const dir=Math.sign(S.me.qa);if(Math.abs(z)>4){tip(`<b>z 值到了 ${z.toFixed(1)}。</b>按规则该止损了：价差可能不会回来。`);draw();return}if(Math.abs(z)<0.5){tip(`z 值回到 ${z.toFixed(2)}，按规则可以平仓了。`);draw();return}}
+  else if(Math.abs(z)>2){tip(`<b>z 值 ${z.toFixed(2)}，出现开仓信号：</b>${z>2?'做空价差':'做多价差'}。`);draw();return}
+  if(S.d>=S.s+LEN){finish();return}}draw()}
+function draw(){if(!S)return;const d=S.d,z=S.z,v=+el.querySelector(`#${P}n`).value;h('nv').textContent=v+'%';const s0=Math.max(S.s-60,0),zz=z.slice(s0,d+1);
+  h('prog').textContent=`${d-S.s} / ${LEN} 天`;h('z').textContent=z[d].toFixed(2);const eq=val(S.me,d);h('eq').textContent='$'+F(eq,0);h('ret').innerHTML=pc(eq/10000-1);
+  const lines=[{v:zz,c:K.css('--acc'),w:2}];K.lines(el.querySelectorAll('canvas')[0],lines,{fmt:x=>x.toFixed(1),after:(g,X,Y,W,H)=>{[[2,'--dn'],[-2,'--up'],[4,'--dn'],[-4,'--up'],[0,'--mute']].forEach(([y,c])=>{g.strokeStyle=K.css(c);g.setLineDash(Math.abs(y)===4?[2,3]:[5,4]);g.beginPath();g.moveTo(0,Y(y));g.lineTo(X(zz.length-1),Y(y));g.stroke()});g.setLineDash([]);const xs=X(S.s-s0);g.strokeStyle=K.css('--mute');g.beginPath();g.moveTo(xs,0);g.lineTo(xs,H-22);g.stroke();g.fillStyle=K.css('--mute');g.fillText('开始',xs+4,12)}});
+  h('cap').textContent='z 值：虚线是 ±2（开仓）和 ±4（止损），灰线是 0（平仓）。竖线左边是开始前的 60 天。';
+  const pa=A[S.a].slice(s0,d+1),pb=A[S.b].slice(s0,d+1);K.lines(el.querySelectorAll('canvas')[1],[{v:pa.map(x=>x/pa[0]),c:'#f59e0b',w:1.8,t:S.a.toUpperCase()},{v:pb.map(x=>x/pb[0]),c:'#0ea5e9',w:1.8,t:S.b.toUpperCase()}],{fmt:x=>x.toFixed(2)});
+  const m=S.me;h('pos').innerHTML=m.qa?`<b>${m.qa>0?'做多价差':'做空价差'}</b>：${m.qa>0?'多':'空'} ${S.a.toUpperCase()} $${F(Math.abs(m.qa*A[S.a][d]),0)}，${m.qb>0?'多':'空'} ${S.b.toUpperCase()} $${F(Math.abs(m.qb*A[S.b][d]),0)}`:'<span class="note">现在空仓。</span>'}
+function act(dir){const d=S.d,z=S.z[d],ok=dir===0?null:(dir<0?z>2:z<-2);if(dir){S.ent.push(ok);trade(S.me,d,dir,+el.querySelector(`#${P}n`).value/100);tip((ok?`✓ z = ${z.toFixed(2)}，符合规则。`:`✗ z = ${z.toFixed(2)}，规则要求 z ${dir<0?'大于 2':'小于 −2'} 才开仓。`)+'按今天收盘价成交。')}else{if(!S.me.qa)return tip('现在没有仓位。');close(S.me,d);tip(`已平仓，z = ${z.toFixed(2)}。`)}draw()}
+function finish(){if(S.ended)return;while(S.d<S.s+LEN){botAct(S.d);S.d++;S.me.eq.push(val(S.me,S.d));S.bot.eq.push(val(S.bot,S.d))}S.ended=true;
+  const st=x=>K.simStats(x,10000),me=st(S.me.eq),b=st(S.bot.eq),t0=K.ts(A.t0+S.s*86400).slice(0,10),t1=K.ts(A.t0+S.d*86400).slice(0,10),ok=S.ent.filter(x=>x).length;
+  const row=(n,s,ac)=>`<tr><td>${n}</td><td>${pc(s.f)}</td><td>${s.dd<0.005?'0%':'-'+(s.dd*100).toFixed(0)+'%'}</td><td>${ac.n}</td><td>$${F(ac.fees,0)}</td></tr>`;
+  h('rev').hidden=false;h('rev').innerHTML=`<h3>复盘</h3><p>${S.a.toUpperCase()}/${S.b.toUpperCase()}，<b>${t0} 到 ${t1}</b>。${S.me.qa?'结束时还有仓位，按最后一天的收盘价计算。':''}</p><div class="scroll"><table class="tbl" style="min-width:0;font-size:13px"><tr><th></th><th>收益</th><th>回撤</th><th>开仓</th><th>手续费</th></tr>${row('你',me,S.me)}${row('规则机器人',b,S.bot)}</table></div>
+<div class="info">你开仓 ${S.ent.length} 次，其中 ${ok} 次符合 z 值规则。规则机器人止损了 ${S.bot.stops} 次。<br>换几个币对和片段试试：价差有时规规矩矩地回到均值，有时一去不回。第 30 课说的"相关性不等于协整"，就是指后一种情况。</div>`;draw();h('rev').scrollIntoView({behavior:K.reduced?'auto':'smooth',block:'start'})}
+el.addEventListener('click',e=>{const a=e.target.closest('[data-a]');if(!a)return;const x=a.dataset.a;if(x==='new')return start();if(!S||S.ended)return;
+  if(x==='s1')step(1);else if(x==='s5')step(5);else if(x==='ls')act(1);else if(x==='ss')act(-1);else if(x==='cl')act(0);else if(x==='end')finish()});
+el.addEventListener('change',e=>{if(e.target.name===`${P}p`)start()});el.addEventListener('input',e=>{if(e.target.id===`${P}n`)h('nv').textContent=e.target.value+'%'});
+const o=K.redraw.l30;K.redraw.l30=()=>{o&&o();draw()};
+(window.__alts||(window.__alts=fetch('alts.json').then(r=>r.json()))).then(x=>{A=x;start()});
 }
 </script><script>{
 const K=KL,$=s=>document.querySelector(s),v=n=>+$(`input[name=${n}]:checked`).value,pc=(x,d=1)=>`<span class="${x>=0?'up':'dn'}">${x>=0?'+':''}${(x*100).toFixed(d)}%</span>`,usd=x=>(x<0?'-$':'$')+Math.abs(Math.round(x)).toLocaleString();
@@ -6844,6 +7126,59 @@ K.quiz($('#l31quiz'),[
 K.redraw.l31=()=>{draw1();draw2()};draw2();
 K.ready.push(d=>{D=d;draw1()});
 }
+{
+const K=KL,F=K.fmt,el=document.getElementById('l31sim'),P='l31s',LEN=200,WARM=40,FEE=0.0005,MM=0.005;
+const pc=(x,d=1)=>`<span class="${x>=0?'up':'dn'}">${x>=0?'+':''}${(x*100).toFixed(d)}%</span>`;
+let B=null,S=null;
+el.innerHTML=`<div class="row seg" role="radiogroup" aria-label="行情片段"><span>行情</span><input type="radio" name="${P}w" id="${P}w0" value="0" checked><label for="${P}w0">片段 1</label><input type="radio" name="${P}w" id="${P}w1" value="1"><label for="${P}w1">片段 2</label><input type="radio" name="${P}w" id="${P}w2" value="2"><label for="${P}w2">片段 3</label><input type="radio" name="${P}w" id="${P}wr" value="r"><label for="${P}wr">随机</label></div>
+<div class="row"><button class="btn" data-a="new">开始 / 重来</button></div>
+<div class="simhud"><div><span>进度</span><b class="num" data-h="prog">—</b></div><div><span>价格</span><b class="num" data-h="px">—</b></div><div><span>总权益</span><b class="num" data-h="eq">—</b></div><div><span>收益</span><b class="num" data-h="ret">—</b></div></div>
+<div class="fig simfig"><canvas aria-label="比特币日 K 线和空单强平价"></canvas></div>
+<div class="info" data-h="tip"></div><div class="simpos" data-h="pos"></div>
+<div class="simbox"><h3>开仓</h3><div class="simf"><label for="${P}s">买现货的金额</label><input id="${P}s" inputmode="decimal" value="5000"><label for="${P}l">空单杠杆</label><input id="${P}l" inputmode="decimal" value="3"><label for="${P}m">补保证金金额</label><input id="${P}m" inputmode="decimal" value="500"></div>
+<div class="row"><button class="btn pri" data-a="open">开仓（买现货 + 等量空单）</button><button class="btn" data-a="add">从备用现金补保证金</button><button class="btn" data-a="cut">两边各减 25%</button><button class="btn" data-a="close">全部平仓</button></div><p class="note" data-h="pre"></p></div>
+<div class="simctl"><button class="btn pri" data-a="s1">下一天 ▶</button><button class="btn" data-a="s5">走 5 天</button><button class="btn" data-a="s20">走 20 天</button><button class="btn" data-a="end">结束复盘</button></div>
+<div data-h="rev" hidden></div>`;
+const h=n=>el.querySelector(`[data-h="${n}"]`),g=id=>+el.querySelector(`#${P}${id}`).value;
+// 资金费率为模拟：基准 0.01%/8 小时，随过去 7 天涨跌调整
+function rate(i){const r7=B[i][4]/B[i-7][4]-1;return Math.max(-0.0003,Math.min(0.001,0.0001+0.003*r7))}
+function acct(){return{spare:10000,q:0,spot:0,M:0,E:0,fund:0,fees:0,liq:0,eq:[10000],adds:0}}
+function liqPx(a){return a.q?(a.M+a.q*a.E)/(a.q*(1+MM)):null}// 空单：M+q(E-p)=MM*q*p
+function tot(a,p){return a.spare+(a.sq||0)*p+(a.q?a.M+a.q*(a.E-p):0)}
+function open(a,i,S_,L){const p=B[i][4];if(a.q)return'已经开过仓了。';const M=S_/L;if(S_+M>a.spare+1)return`钱不够：现货 $${F(S_,0)} + 保证金 $${F(M,0)} 超过了备用现金。`;
+  const q=S_/p;a.sq=q*(1-FEE);a.q=a.sq;a.E=p;a.M=M;a.spare-=S_+M+a.q*p*FEE;a.fees+=S_*FEE+a.q*p*FEE;return''}
+function closeAll(a,i){const p=B[i][4];if(a.q){const pnl=a.q*(a.E-p),f=a.q*p*FEE;a.spare+=a.M+pnl-f;a.fees+=f;a.q=0;a.M=0}if(a.sq){const f=a.sq*p*FEE;a.spare+=a.sq*p-f;a.fees+=f;a.sq=0}}
+function cut(a,i){const p=B[i][4];if(!a.q)return;const dq=a.q*0.25,pnl=dq*(a.E-p);a.q-=dq;const rel=dq*p*(1-FEE);a.sq-=dq;a.M+=rel+pnl-dq*p*FEE;a.fees+=2*dq*p*FEE}
+function day(a,i){if(!a.q)return null;const r=rate(i-1),f=a.q*B[i-1][4]*r*3;a.M+=f;a.fund+=f;const lq=liqPx(a);if(lq&&B[i][2]>=lq){a.M=0;a.q=0;a.liq++;return lq}return null}
+function start(){const w=el.querySelector(`input[name=${P}w]:checked`).value,D=K.data.daily,pre=['2025-03-20','2025-06-25','2026-02-01'];let s;
+  if(w==='r'){const R=K.rng(Date.now()%1e6);s=WARM+Math.floor(R()*(D.length-WARM-LEN-1))}else{const t=Date.parse(pre[+w]+'T00:00:00Z')/1000;s=D.findIndex(x=>x[0]>=t)}
+  B=D.slice(s-WARM,s+LEN+1);S={i:WARM,me:acct(),bot:acct(),ended:false};h('rev').hidden=true;
+  tip('<b>任务（第 31 课）：</b>买入现货，同时开等量的永续空单。价格涨跌两边抵消，空单每 8 小时收资金费率。<br>风险在空单：它单独放在合约账户里，价格涨太多会被强平。强平之后你只剩现货，套利变成了赌方向。紫线是空单的强平价。<br><b>资金费率是模拟的</b>：基准每 8 小时 0.01%，随过去 7 天的涨跌变化，下跌时可能变负。');pre_();draw()}
+function tip(m){h('tip').innerHTML=m}
+function pre_(){const s=g('s'),l=g('l');h('pre').textContent=s>0&&l>0?`现货 $${F(s,0)} + 空单保证金 $${F(s/l,0)}，剩下 $${F(10000-s-s/l,0)} 作为备用现金。空单大约在价格上涨 ${((1/l)/(1+MM)*100).toFixed(0)}% 左右时被强平。`:''}
+function botAct(){const a=S.bot,i=S.i,p=B[i][4];if(!a.q&&!a.liqd){open(a,i,5000,3);return}if(!a.q)return;const lq=liqPx(a);if(lq/p-1<0.15){const need=Math.min(a.spare,a.q*(p*1.3*(1+MM))-a.q*a.E-a.M);if(need>0){a.spare-=need;a.M+=need;a.adds++}else cut(a,i)}}
+function step(n){for(let k=0;k<n&&!S.ended;k++){botAct();S.i++;const b=day(S.bot,S.i);if(b)S.bot.liqd=1;const m=S.me,lq=day(m,S.i);S.me.eq.push(tot(S.me,B[S.i][4]));S.bot.eq.push(tot(S.bot,B[S.i][4]));
+  if(lq){tip(`<b>空单被强平了</b>（强平价 ${F(lq,0)}）。保证金没了，你现在只拿着现货：这已经不是套利，而是单边做多。`);draw();return}
+  if(m.q){const d=liqPx(m)/B[S.i][4]-1;if(d<0.12){tip(`<b>注意：</b>强平价离现价只有 ${(d*100).toFixed(1)}%。可以补保证金，或者两边各减一点仓位。`);draw();return}}
+  if(S.i>=WARM+LEN){finish();return}}draw()}
+function draw(){if(!S)return;const i=S.i,p=B[i][4],m=S.me,v=Math.max(0,i-80),lq=liqPx(m);h('prog').textContent=`${i-WARM} / ${LEN} 天`;h('px').textContent=F(p,0);const e=tot(m,p);h('eq').textContent='$'+F(e,0);h('ret').innerHTML=pc(e/10000-1);
+  const lines=[];if(lq)lines.push({p:lq,c:'#a855f7',t:'空单强平'});if(m.q)lines.push({p:m.E,c:K.css('--acc'),t:'开仓价'});
+  K.candles(el.querySelector('canvas'),B.slice(v,i+1),{lines,label:()=>'',scaleOn:B.slice(v,i+1).concat(lq&&lq<p*1.3?[[0,lq,lq,lq,lq]]:[])});
+  h('pos').innerHTML=(m.q?`现货 ${(m.sq).toFixed(4)} BTC（$${F(m.sq*p,0)}） · 空单 ${m.q.toFixed(4)} BTC · 空单账户 $${F(m.M+m.q*(m.E-p),0)} · 强平价 ${F(lq,0)}（${pc(lq/p-1)}） · 本期资金费率 ${(rate(i)*100).toFixed(3)}%/8h`:(m.sq?`<b>只剩现货 ${m.sq.toFixed(4)} BTC</b>（空单已被强平）`:'<span class="note">现在空仓。</span>'))+`<br>备用现金 $${F(m.spare,0)} · 累计资金费 <span class="${m.fund>=0?'up':'dn'}">$${F(m.fund,0)}</span> · 手续费 $${F(m.fees,0)}`}
+function finish(){if(S.ended)return;while(S.i<WARM+LEN){botAct();S.i++;if(day(S.bot,S.i))S.bot.liqd=1;day(S.me,S.i);S.me.eq.push(tot(S.me,B[S.i][4]));S.bot.eq.push(tot(S.bot,B[S.i][4]))}S.ended=true;
+  const st=x=>K.simStats(x,10000),me=st(S.me.eq),b=st(S.bot.eq),t0=K.ts(B[WARM][0]).slice(0,10),t1=K.ts(B[B.length-1][0]).slice(0,10),hp=B[B.length-1][4]/B[WARM][4]-1;
+  const row=(n,s,a)=>`<tr><td>${n}</td><td>${pc(s.f)}</td><td>${s.dd<0.005?'0%':'-'+(s.dd*100).toFixed(0)+'%'}</td><td>$${F(a.fund,0)}</td><td>${a.liq}</td></tr>`;
+  h('rev').hidden=false;h('rev').innerHTML=`<h3>复盘</h3><p><b>${t0} 到 ${t1}</b>，比特币 ${pc(hp)}。资金费率为模拟数据。</p><div class="scroll"><table class="tbl" style="min-width:0;font-size:13px"><tr><th></th><th>收益</th><th>回撤</th><th>资金费</th><th>强平</th></tr>${row('你',me,S.me)}${row('规则机器人',b,S.bot)}</table></div>
+<div class="info">规则机器人：现货 $5,000、空单 3 倍，强平价离现价不到 15% 时从备用现金补保证金，备用现金用完就两边减仓。<br>套利的收益来自资金费，风险来自空单那条腿。备用现金留得越多，越安全，但整体收益率越低。</div>`;draw();h('rev').scrollIntoView({behavior:K.reduced?'auto':'smooth',block:'start'})}
+el.addEventListener('click',e=>{const a=e.target.closest('[data-a]');if(!a)return;const x=a.dataset.a;if(x==='new')return start();if(!S||S.ended)return;const m=S.me,i=S.i;
+  if(x==='s1')step(1);else if(x==='s5')step(5);else if(x==='s20')step(20);else if(x==='end')finish();
+  else if(x==='open'){const r=open(m,i,g('s'),g('l'));tip(r||`已开仓：按今天收盘价 ${F(B[i][4],0)} 买入现货、开出空单。`);draw()}
+  else if(x==='add'){if(!m.q)return tip('没有空单。');const v=Math.min(g('m'),m.spare);if(v<=0)return tip('备用现金用完了。');m.spare-=v;m.M+=v;m.adds++;tip(`补了 $${F(v,0)} 保证金，强平价上移到 ${F(liqPx(m),0)}。`);draw()}
+  else if(x==='cut'){if(!m.q)return tip('没有空单。');cut(m,i);tip(`两边各减 25%，卖现货的钱转进空单账户。强平价上移到 ${F(liqPx(m),0)}。`);draw()}
+  else if(x==='close'){closeAll(m,i);tip('已全部平仓。');draw()}});
+el.addEventListener('change',e=>{if(e.target.name===`${P}w`)start()});el.addEventListener('input',e=>{if(/l31s[sl]$/.test(e.target.id))pre_()});
+const o=K.redraw.l31;K.redraw.l31=()=>{o&&o();draw()};K.ready.push(()=>start());
+}
 </script><script>{
 const K=KL,$=s=>document.querySelector(s),v=n=>+$(`input[name=${n}]:checked`).value,pc=(x,d=0)=>`<span class="${x>=0?'up':'dn'}">${x>=9?Math.round(x+1)+' 倍':(x>=0?'+':'')+(x*100).toFixed(d)+'%'}</span>`;
 const N=x=>{const t=1/(1+0.2316419*Math.abs(x)),d=0.3989423*Math.exp(-x*x/2),p=d*t*(0.3193815+t*(-0.3565638+t*(1.781478+t*(-1.821256+t*1.330274))));return x>0?1-p:p};
@@ -6889,6 +7224,59 @@ K.quiz($('#l32quiz'),[
 
 K.redraw.l32=()=>{draw1();draw2()};draw1();
 (window.__btcLong||(window.__btcLong=fetch('btc_long.json').then(r=>r.json()))).then(x=>{L=x;const s=L.t.findIndex(y=>y>=Date.UTC(2016,8,1)/1000);let last='';MI=[];L.t.forEach((t,i)=>{if(i<s)return;const m=K.ts(t).slice(0,7);if(m!==last){MI.push(i);last=m}});draw2()});
+}
+{
+const K=KL,F=K.fmt,el=document.getElementById('l32sim'),P='l32s',WEEKS=26,WARM=40;
+const pc=(x,d=1)=>`<span class="${x>=0?'up':'dn'}">${x>=0?'+':''}${(x*100).toFixed(d)}%</span>`;
+let B=null,S=null;
+function N(x){const t=1/(1+0.2316419*Math.abs(x)),d=0.3989423*Math.exp(-x*x/2),p=d*t*(0.3193815+t*(-0.3565638+t*(1.781478+t*(-1.821256+t*1.330274))));return x>0?1-p:p}
+function bs(S0,Kx,T,v,call){const d1=(Math.log(S0/Kx)+v*v*T/2)/(v*Math.sqrt(T)),d2=d1-v*Math.sqrt(T);return call?S0*N(d1)-Kx*N(d2):Kx*N(-d2)-S0*N(-d1)}
+function iv(i){let s=0,s2=0;for(let j=i-29;j<=i;j++){const r=Math.log(B[j][4]/B[j-1][4]);s+=r;s2+=r*r}const sd=Math.sqrt(s2/30-(s/30)**2);return Math.max(0.3,sd*Math.sqrt(365)*1.1)}
+el.innerHTML=`<div class="row seg" role="radiogroup" aria-label="行情片段"><span>行情</span><input type="radio" name="${P}w" id="${P}w0" value="0" checked><label for="${P}w0">片段 1</label><input type="radio" name="${P}w" id="${P}w1" value="1"><label for="${P}w1">片段 2</label><input type="radio" name="${P}w" id="${P}w2" value="2"><label for="${P}w2">片段 3</label><input type="radio" name="${P}w" id="${P}wr" value="r"><label for="${P}wr">随机</label></div>
+<div class="row"><button class="btn" data-a="new">开始 / 重来</button></div>
+<div class="simhud"><div><span>进度</span><b class="num" data-h="prog">—</b></div><div><span>价格</span><b class="num" data-h="px">—</b></div><div><span>权益</span><b class="num" data-h="eq">—</b></div><div><span>收益</span><b class="num" data-h="ret">—</b></div></div>
+<div class="fig simfig"><canvas aria-label="比特币日 K 线和本周的行权价"></canvas></div>
+<div class="info" data-h="tip"></div><div class="simpos" data-h="pos"></div>
+<div class="simbox"><h3>这一周做什么</h3><p class="note" data-h="q"></p>
+<div class="row seg" role="radiogroup" aria-label="看涨"><span>卖看涨（备兑）</span>${['0','5','10','15'].map((x,i)=>`<input type="radio" name="${P}c" id="${P}c${i}" value="${x}"${i?'':' checked'}><label for="${P}c${i}">${x==='0'?'不卖':'+'+x+'%'}</label>`).join('')}</div>
+<div class="row seg" role="radiogroup" aria-label="看跌"><span>卖看跌（接货）</span>${['0','5','10','15'].map((x,i)=>`<input type="radio" name="${P}p" id="${P}p${i}" value="${x}"${i?'':' checked'}><label for="${P}p${i}">${x==='0'?'不卖':'−'+x+'%'}</label>`).join('')}</div>
+<div class="row seg" role="radiogroup" aria-label="保护"><span>买看跌（保险）</span>${['0','5','10','20'].map((x,i)=>`<input type="radio" name="${P}b" id="${P}b${i}" value="${x}"${i?'':' checked'}><label for="${P}b${i}">${x==='0'?'不买':'−'+x+'%'}</label>`).join('')}</div>
+<div class="simctl"><button class="btn pri" data-a="go">按选择过一周 ▶</button><button class="btn" data-a="end">结束复盘</button></div></div>
+<div data-h="rev" hidden></div>`;
+const h=n=>el.querySelector(`[data-h="${n}"]`),sel=n=>+el.querySelector(`input[name=${P}${n}]:checked`).value/100;
+function acct(p){return{btc:5000/p,cash:5000,prem:0,called:0,put:0,ins:0,eq:[10000]}}
+function week(a,i,c,pu,bu){const p=B[i][4],T=7/365,v=iv(i),j=i+7,pe=B[j][4],r={};
+  if(c){const Kc=p*(1+c),pr=bs(p,Kc,T,v,1)*a.btc;a.cash+=pr;a.prem+=pr;r.c={K:Kc,pr,q:a.btc};if(pe>Kc){a.cash+=a.btc*Kc;r.c.hit=1;a.called++;a.btc=0}}
+  if(pu){const Kp=p*(1-pu),q=a.cash/Kp,pr=bs(p,Kp,T,v,0)*q;a.cash+=pr;a.prem+=pr;r.p={K:Kp,pr,q};if(pe<Kp){a.cash-=q*Kp;a.btc+=q;r.p.hit=1;a.put++}}
+  if(bu&&a.btc>0){const Kb=p*(1-bu),pr=bs(p,Kb,T,v,0)*a.btc;a.cash-=pr;a.ins+=pr;r.b={K:Kb,pr};if(pe<Kb){a.cash+=a.btc*(Kb-pe);r.b.hit=1}}
+  for(let k=i+1;k<=j;k++)a.eq.push(a.cash+a.btc*B[k][4]);return r}
+function start(){const w=el.querySelector(`input[name=${P}w]:checked`).value,D=K.data.daily,pre=['2025-03-10','2025-07-15','2026-01-20'];let s;
+  if(w==='r'){const R=K.rng(Date.now()%1e6);s=WARM+Math.floor(R()*(D.length-WARM-WEEKS*7-1))}else{const t=Date.parse(pre[+w]+'T00:00:00Z')/1000;s=D.findIndex(x=>x[0]>=t)}
+  B=D.slice(s-WARM,s+WEEKS*7+1);const p=B[WARM][4];S={i:WARM,me:acct(p),bot:acct(p),hold:acct(p),k:0,ended:false,last:null};h('rev').hidden=true;
+  tip('<b>任务（第 32 课）：</b>开始时你有一半比特币、一半现金。每周选一次：<br>① <b>卖看涨</b>：用手上全部比特币做备兑。到期价格涨过行权价，币按行权价卖掉。<br>② <b>卖看跌</b>：用全部现金做担保。到期价格跌破行权价，按行权价买入比特币。<br>③ <b>买看跌</b>：给手上的比特币买保险。<br>权利金收付都按现金算。<b>期权价格是模拟的</b>：用 Black-Scholes 公式，隐含波动率取最近 30 天实际波动的 1.1 倍。');draw()}
+function tip(m){h('tip').innerHTML=m}
+function draw(){if(!S)return;const i=S.i,p=B[i][4],a=S.me,v=Math.max(0,i-60),T=7/365,vol=iv(i),c=sel('c'),pu=sel('p'),bu=sel('b');
+  h('prog').textContent=`第 ${Math.min(S.k+1,WEEKS)} / ${WEEKS} 周`;h('px').textContent=F(p,0);const e=a.cash+a.btc*p;h('eq').textContent='$'+F(e,0);h('ret').innerHTML=pc(e/10000-1);
+  const lines=[];if(c)lines.push({p:p*(1+c),c:K.css('--dn'),t:'看涨行权价'});if(pu)lines.push({p:p*(1-pu),c:K.css('--up'),t:'看跌行权价'});if(bu)lines.push({p:p*(1-bu),c:'#a855f7',t:'保险行权价'});
+  if(S.last)S.last.forEach(l=>lines.push(l));
+  K.candles(el.querySelector('canvas'),B.slice(v,i+1),{lines,label:()=>''});
+  h('pos').innerHTML=`比特币 ${a.btc.toFixed(4)}（$${F(a.btc*p,0)}） · 现金 $${F(a.cash,0)}<br>累计收到权利金 $${F(a.prem,0)} · 买保险花了 $${F(a.ins,0)} · 币被行权卖掉 ${a.called} 次 · 接货 ${a.put} 次`;
+  const q=[];if(c)q.push(`卖看涨 ${F(p*(1+c),0)}：收 $${F(bs(p,p*(1+c),T,vol,1)*a.btc,0)}`);if(pu)q.push(`卖看跌 ${F(p*(1-pu),0)}：收 $${F(bs(p,p*(1-pu),T,vol,0)*a.cash/(p*(1-pu)),0)}`);if(bu)q.push(`买看跌 ${F(p*(1-bu),0)}：付 $${F(bs(p,p*(1-bu),T,vol,0)*a.btc,0)}`);
+  h('q').textContent=`隐含波动率（模拟）${(vol*100).toFixed(0)}%。`+(q.length?q.join('；')+'。':'这周什么都不做。')}
+function go(){const i=S.i,c=sel('c'),pu=sel('p'),bu=sel('b'),p=B[i][4];const r=week(S.me,i,c,pu,bu);week(S.bot,i,0.10,0.10,0);week(S.hold,i,0,0,0);S.i+=7;S.k++;const pe=B[S.i][4];
+  const m=[`这一周比特币从 ${F(p,0)} ${pe>=p?'涨':'跌'}到 ${F(pe,0)}（${pc(pe/p-1)}）。`];
+  if(r.c)m.push(r.c.hit?`看涨被行权：${r.c.q.toFixed(4)} BTC 按 ${F(r.c.K,0)} 卖掉了，之后的涨幅和你无关。`:`看涨没被行权，白收 $${F(r.c.pr,0)} 权利金。`);
+  if(r.p)m.push(r.p.hit?`看跌被行权：按 ${F(r.p.K,0)} 买入 ${r.p.q.toFixed(4)} BTC，比现价贵 ${F(r.p.K-pe,0)}。`:`看跌没被行权，白收 $${F(r.p.pr,0)} 权利金。`);
+  if(r.b)m.push(r.b.hit?`保险生效了：跌破 ${F(r.b.K,0)} 的部分得到赔付。`:`保险没用上，花了 $${F(r.b.pr,0)}。`);
+  S.last=[r.c&&{p:r.c.K,c:K.css('--mute'),t:'上周看涨',d:1},r.p&&{p:r.p.K,c:K.css('--mute'),t:'上周看跌',d:1}].filter(Boolean);tip(m.join('<br>'));if(S.k>=WEEKS)finish();else draw()}
+function finish(){if(S.ended)return;while(S.k<WEEKS){const i=S.i;week(S.me,i,0,0,0);week(S.bot,i,0.10,0.10,0);week(S.hold,i,0,0,0);S.i+=7;S.k++}S.ended=true;
+  const st=x=>K.simStats(x,10000),me=st(S.me.eq),b=st(S.bot.eq),hd=st(S.hold.eq),t0=K.ts(B[WARM][0]).slice(0,10),t1=K.ts(B[S.i][0]).slice(0,10),hp=B[S.i][4]/B[WARM][4]-1;
+  const row=(n,s,a)=>`<tr><td>${n}</td><td>${pc(s.f)}</td><td>${s.dd<0.005?'0%':'-'+(s.dd*100).toFixed(0)+'%'}</td><td>${a?'$'+F(a.prem,0):'—'}</td></tr>`;
+  h('rev').hidden=false;h('rev').innerHTML=`<h3>复盘</h3><p><b>${t0} 到 ${t1}</b>，比特币 ${pc(hp)}。期权价格为模拟数据。</p><div class="scroll"><table class="tbl" style="min-width:0;font-size:13px"><tr><th></th><th>收益</th><th>回撤</th><th>权利金</th></tr>${row('你',me,S.me)}${row('规则：两边都卖 10%',b,S.bot)}${row('一半币一半现金不动',hd)}</table></div>
+<div class="info">卖期权每周都有一笔"白收"的权利金，大部分周都不会被行权。它的代价藏在少数几周里：大涨时币被按行权价卖掉，大跌时按行权价接货。这就是第 32 课说的"上有封顶、下可能很深"。<br>如果模拟里提前结束，剩下的周按不做期权计算。</div>`;draw();h('rev').scrollIntoView({behavior:K.reduced?'auto':'smooth',block:'start'})}
+el.addEventListener('click',e=>{const a=e.target.closest('[data-a]');if(!a)return;const x=a.dataset.a;if(x==='new')return start();if(!S||S.ended)return;if(x==='go')go();else if(x==='end')finish()});
+el.addEventListener('change',e=>{if(e.target.name===`${P}w`)start();else if(S&&!S.ended)draw()});
+const o=K.redraw.l32;K.redraw.l32=()=>{o&&o();draw()};K.ready.push(()=>start());
 }
 </script><script>{
 const K=KL,$=s=>document.querySelector(s),v=n=>+$(`input[name=${n}]:checked`).value,pc=(x,d=1)=>`<span class="${x>=0?'up':'dn'}">${x>=0?'+':''}${(x*100).toFixed(d)}%</span>`;
